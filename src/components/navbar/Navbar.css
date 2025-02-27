@@ -1,0 +1,83 @@
+.nav-ul-1-wrapper {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-wrapper {
+    padding: 0px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background: #fff;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.09);
+}
+
+/* Dropdown Styling */
+.nav-item {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    min-width: 288px;
+    border-radius: 5px;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    color: #007bff;
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-toggle-btn {
+    background: transparent;
+    border: 0;
+}
+
+.nav-toggle-btn svg {
+    font-size: 45px;
+}
+
+.nav-mob-toggle {
+    position: fixed;
+    background: #fff;
+    width: 83%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    z-index: 3;
+    padding: 20px 25px;
+    transition: 1s;
+    border: 1px solid #efefef;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 1px 11px 0px;
+}
+
+.toggleanimate {
+    right: 0;
+    transition: 1s;
+}

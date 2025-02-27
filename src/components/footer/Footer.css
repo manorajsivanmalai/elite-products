@@ -1,0 +1,17 @@
+.footer-wrapper{
+    background: #f2f6f6;
+}
+.footer-r-1{
+    padding: 40px 0;
+}
+.footer-r-2{
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 0;
+}
+.footer-ul-wrapper{
+    list-style: none;
+    margin-top: 15px;
+}
+.footer-ul-wrapper li.nav-item .nav-link{
+    padding: 5px 0;
+}

@@ -1,0 +1,295 @@
+.main-banner {
+    background-image: url("../../../assets/images/shampoo/main-banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.sha-sec-pat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.sha-sec-img img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.sha-sec-content {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.sha-sec-content h5 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f1469a;
+}
+
+.sha-sec-content p {
+    font-size: 18px;
+    color: #f1469a;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sha-sec-description {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.sha-sec-des {
+    background-color: #f1469a;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+.sha-sec-des h4,
+.sha-sec-des h5 {
+    color: #fff;
+    margin: 5px 0;
+}
+
+.shampo-sec2{
+   margin-top: -665px;
+}
+.sham-sec2-img{
+    position: relative;
+}
+.sham-sec-con{
+    position: absolute;
+    top: 47%;
+    left: 26%;
+}
+.sham-sec-con h1{
+    color: #f1469a;
+    font-size: 38px;
+}
+.sham-products-des{
+    position: absolute;
+    top: 51%;
+    left: 10%;
+    display: flex;
+    justify-content: space-around;
+    gap: 55px;
+}
+.shamp-content{
+    text-align: justify;
+    margin-right: 150px;
+}
+.shamp-content h4{
+    color: #f1469a;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.shamp-content p{
+    /* color: #f1469a; */
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+.shamp-desc-two{
+    position: absolute;
+    top: 70%;
+    left: 165px;
+    display: flex;
+}
+.shap-des-two-content{
+    width: 75%;
+}
+.shap-des-two-content h4{
+    color: #f1469a;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.shap-des-two-content p{
+    /* color: #f1469a; */
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+.shampoo-image1{
+    width: 24%;
+}
+.shampoo-image2{
+    width: 45%;
+}
+
+
+
+.shampoo-sec3 {
+    margin-top: -11%;
+    padding: 50px 0;
+}
+
+.shamp-con3 {
+    position: relative;
+    text-align: center;
+}
+
+.clipboard-img {
+    width: 100%;
+    display: block;
+}
+
+.clipcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.clipcontent-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.clipcontent-img {
+    flex: 1;
+    max-width: 200px;
+}
+
+.clipcontent-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.clipcont-description {
+    flex: 2;
+    text-align: left;
+}
+
+.clipcont-description h4 {
+    color: #f1469a;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.clipcont-description p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+@media (max-width: 1023px) {
+    .sha-sec-img img {
+        max-width: 300px;
+    }
+    .sha-sec-content {
+        max-width: 90%;
+        padding: 10px;
+    }
+    .shampo-sec2 {
+        margin-top: 0;
+    }
+    .sham-sec-con {
+        position: relative;
+        text-align: center;
+        top: auto;
+        left: auto;
+        margin-top: 20px;
+    }
+    .sham-sec-con h1 {
+        font-size: 24px;
+    }
+    .sham-products-des {
+        position: relative;
+        flex-direction: column;
+        top: auto;
+        left: auto;
+        align-items: center;
+        gap: 20px;
+    }
+    .shamp-content {
+        margin-right: 0;
+        padding: 0 15px;
+    }
+    .shamp-desc-two {
+        position: relative;
+        top: auto;
+        left: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .shap-des-two-content {
+        width: 90%;
+    }
+    .shampoo-image1,
+    .shampoo-image2 {
+        width: 80%;
+        max-width: 300px;
+    }
+    .shampoo-sec3 .shamp-con3 .clipboard-img {
+       display: none
+    }
+    .clipcontent{
+        position: static;
+        gap: 18%;
+        width: 92%;
+        transform: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .sha-sec-img img {
+        max-width: 250px;
+    }
+    .sha-sec-content h5 {
+        font-size: 22px;
+    }
+    .sha-sec-content p {
+        font-size: 16px;
+    }
+    .sham-sec-con h1 {
+        font-size: 20px;
+    }
+    .sham-products-des {
+        gap: 15px;
+    }
+    .shamp-content h4 {
+        font-size: 22px;
+    }
+    .shap-des-two-content h4 {
+        font-size: 22px;
+    }
+    .shampoo-image1,
+    .shampoo-image2 {
+        width: 90%;
+    }
+    .clipcontent-item {
+        flex-direction: column;
+    }
+}
+
+
