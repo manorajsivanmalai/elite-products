@@ -4,7 +4,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Spray from "../../../components/Bahubali/Spray";
 
 import spray from "../../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png";
-import "./product1.css"
+
 import bannerimg2 from "../../../assets/images/homepage/banners/home-banner-desktop-2.webp"
 import bannerimg4 from "../../../assets/images/homepage/banners/home-banner-desktop-4.webp"
 import mist from "../../../assets/images/bahubali/intimate-mist.png"
@@ -25,7 +25,7 @@ import workouts from "../../../assets/images/bahubali/workouts.jpg"
 import needed from "../../../assets/images/bahubali/needed.jpg"
 import intimacy from "../../../assets/images/bahubali/intimacy.jpg"
 import dressing from "../../../assets/images/bahubali/dressing.jpg"
-
+import "../Bahubali/product1.css"
 
 
 
