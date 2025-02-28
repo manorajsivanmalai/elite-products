@@ -4,7 +4,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Spray from "../../../components/Bahubali/Spray";
 
 import spray from "../../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png";
-import "../Bahubali/product2.css"
+import "../Bahubali/Product2.css"
 import bannerimg2 from "../../../assets/images/homepage/banners/home-banner-desktop-2.webp"
 import bannerimg4 from "../../../assets/images/homepage/banners/home-banner-desktop-4.webp"
 import foam1 from "../../../assets/images/bahubali/foam-1.png"
