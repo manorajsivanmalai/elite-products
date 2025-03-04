@@ -3,8 +3,10 @@
 import logo from "../../assets/images/logos/logo.png"
 //css
 import "./Footer.css"
+import { Link } from "react-router-dom";
 
-const Footer = () => {
+
+const Footer = ({cartItems}) => {
     return (
         <>
             <footer className="footer-wrapper">
@@ -17,19 +19,18 @@ const Footer = () => {
                             <div className="col-md-4  col-6">
                                 <h3>Quick Links</h3>
                                 <ul className="footer-ul-wrapper">
-                                    <li className="nav-item"><a href="" className="nav-link">Home</a></li>
-                                    <li className="nav-item"><a href="" className="nav-link">About</a></li>
-                                    <li className="nav-item"><a href="" className="nav-link">Contact</a></li>
-                                    <li className="nav-item"><a href="" className="nav-link">Cart</a></li>
+                                    <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+                                    <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
+                                    <li className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></li>
+                                    <li className="nav-item"><Link to="/cart" className="nav-link">Cart</Link></li>
                                 </ul>
                             </div>
                             <div className="col-md-4  col-6">
                                 <h3>Quick Links</h3>
                                 <ul className="footer-ul-wrapper">
-                                    <li className="nav-item"><a href="" className="nav-link">Privacy Policy</a></li>
-                                    <li className="nav-item"><a href="" className="nav-link">Terms of Service</a></li>
-                                    <li className="nav-item"><a href="" className="nav-link">Contact</a></li>
-                                    <li className="nav-item"><a href="" className="nav-link">Cart</a></li>
+                                    <li className="nav-item"><Link to='/policy' className="nav-link">Privacy Policy</Link></li>
+                                    <li className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></li>
+                                    <li className="nav-item"><Link to="/cart" className="nav-link">Cart</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -37,7 +38,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-r-2">
                     <div className="container">
-                        <p>Coppyright 2019 by KM - All right reserved</p>
+                        <p>Coppyright 2025 - All right reserved</p>
                     </div>
                 </div>
             </footer>

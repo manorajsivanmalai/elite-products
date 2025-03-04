@@ -1,0 +1,134 @@
+
+.chkout-outer {
+    position: relative;
+}
+.error{
+    color: red;
+}
+
+.final-price{
+    font-size: 20px;
+    font-weight: bold;
+}
+.chk-out{
+    padding: 20px;
+    width: 80%;
+}
+.caart-holder{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.form-contains{
+    padding: 7px 32px;
+    border: 1px solid #bfb6b6;
+    border-radius: 6px;
+    background: #fef7f1;
+    padding: 28px 28px;
+    flex: 1;
+}
+.form-contains>form{
+    background: #fff;
+    padding: 18px 17px;
+    border-radius: 5px;
+}
+.form-group{
+    padding: 10px;
+}
+.crt-details{
+    padding-left: 26px;
+}
+.crt-details>h3{
+    font-size: 20px;
+   
+}
+.img-fluid{
+    border-radius: 10px;
+}
+.chkout-summary{
+    padding: 28px 28px;
+ 
+   border: 1px solid #bfb6b6;
+   border-radius: 6px;
+}
+.chkout-summary h2{
+    font-size: 28px;
+    /* text-align: center; */
+}
+.des-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+}
+.des-details img{
+    width: 100%;
+}
+.order-btns{
+    display: flex;
+    grid-area: 15px;
+}
+.des-con{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+.des-con h5{
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.des-con p{
+    padding-bottom: 10px;
+}
+.rowgaps{
+    gap: 10px;
+}
+
+.chk-dtls{
+    border: 1px solid #bfb6b6;
+    border-radius: 6px;
+    padding: 25px;
+    margin-left: -33px;
+}
+
+@media (max-width: 767px) {
+    .chkout-summary{
+        padding-top: 25px;
+    }
+    .form-control{
+        padding: 7px;
+    }
+    
+    .form-contains,.chkout-summary{
+        padding: 21px;
+    }
+    .chk-dtls{
+        margin: 0 !important;
+    }
+
+   
+
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .chkout-summary {
+        padding: 10px;
+    }
+    .chk-out{
+        width: 90%;
+    }
+    .chkout-summary .summary-content .chkout-head-summary{
+        font-size: 20px;
+    }
+    .des-details{
+        flex-direction: column;
+    }
+    .crt-details{
+        padding: 0;
+        text-align: center;
+    }
+    .form-contains{
+        padding: 10px;
+    }
+}

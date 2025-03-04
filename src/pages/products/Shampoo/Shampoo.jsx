@@ -5,7 +5,7 @@ import clipboard from "../../../assets/images/shampoo/clipboard.png"
 import shampoo1 from "../../../assets/images/shampoo/shampoo-1.png"
 import shampp02 from "../../../assets/images/shampoo/shamppo-2.png"
 import Spray from "../../../components/Bahubali/Spray"
-function Shampoo() {
+function Shampoo({addToCart}) {
   return (
   <>
   <section>
@@ -48,7 +48,6 @@ function Shampoo() {
             <h4>Why do parents invest in baby shampoo but overlook proper hair care after age 5?</h4>
             <p>As children grow, maintaining healthy, strong, and dandruff-free hair becomes crucial—especially for school-going kids and young athletes exposed to sweat, dirt, and pollution.
             Introducing Chanakya Care Shampoo: A pH-balanced, sulfate-free formula designed specifically for kids aged 5-15 years. It’s safe, gentle, and packed with natural ingredients to ensure hair remains nourished, strong, and protected during these vital years</p>
-            <p>Young athletes are always on the move—training, sweating, and pushing their limits. But with constant exposure to sweat, dirt, and pollution, their scalp health is at risk. Regular shampoos may not provide the protection and nourishment their hair needs.</p>
            </div>
 
 
@@ -60,7 +59,6 @@ function Shampoo() {
                 <h4>What makes Chanakya Care Shampoo suitable for growing kids?</h4>
                 <p>To bridge this gap in hair care, Chanakya Care Shampoo was born—a specialized, pH-balanced, natural formula designed for growing kids to ensure their hair remains healthy, nourished, and protected during these important years.</p>
                 <p><strong>Chanaka care Shampoo cares for your:-</strong> Chanakya Care Shampoo is specially formulated for kids aged 5 to 15 years, focusing on sensitive scalps, dandruff control, lice prevention, and overall hair health. It is pH-balanced, sulfate-free, and paraben-free, ensuring safe and gentle care.</p>
-                <p>Chanakya Care Shampoo is enriched with natural ingredients that promote healthy hair and scalp. It maintains pH balance, gently exfoliates dead skin, and prevents dandruff. Tea tree oil and neem extract provide antibacterial and antifungal protection, reducing lice and scalp infections. Aloe vera and plant keratin soothe the scalp, hydrate hair, and repair damage. Onion extract strengthens follicles, reducing hair fall and boosting growth, while salicylic acid removes dandruff flakes and controls excess oil, keeping hair fresh and nourished.</p>
 
             </div>
             <img src={shampoo} alt="shamp2" className='shampoo-image2' />
@@ -114,21 +112,7 @@ function Shampoo() {
             </div>
           </div>
 
-          {/* Item 3 */}
-          <div className="clipcontent-item">
-            <div className="clipcontent-img">
-              <img src={shampoo1} alt="Why Mom’s Shampoo is Not Suitable for Kids" />
-            </div>
-            <div className="clipcont-description">
-              <h4>Why Mom’s Shampoo is Not Suitable for Kids</h4>
-              <p>
-                Many parents unknowingly use adult shampoos on their kids, not realizing the risks. 
-                Adult shampoos contain stronger chemicals, which can cause dryness and scalp sensitivity. 
-                Chanakya Care Shampoo is sulfate-free, paraben-free, and pH-balanced to ensure gentle cleansing 
-                and healthy hair growth for kids.
-              </p>
-            </div>
-          </div>
+       
         </div>
       </div>
     </section>
@@ -139,7 +123,8 @@ function Shampoo() {
           title="Chanakya Care Shampoo"
           description="Let Kids be champions with the right Shampoo because strong hair, healthy scalps and confidence start at an early age."
           price={541}
-          oldPrice={600}>
+          oldPrice={600}    addToCart={addToCart}>
+          
 
         </Spray>
     </section>

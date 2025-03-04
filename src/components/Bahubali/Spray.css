@@ -8,11 +8,6 @@
  
   }
 
-  .bahu-product-left {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
 
   .thumbnail-gallery {
     display: flex;
@@ -21,8 +16,6 @@
   }
   
   .thumbnail {
-    width: 50px;
-    height: 50px;
     object-fit: cover;
     cursor: pointer;
     border: 1px solid transparent;
@@ -35,10 +28,7 @@
     transform: scale(1.07);
   }
   
-  .product-image {
-    width: 380px;
-    height: auto;
-  }
+
 
   .product-details {
     /* max-width: 400px; */
@@ -136,5 +126,11 @@
       width: 100%;
       height: auto;
     }
-
+    .thumbnail-gallery{
+      flex-direction: row;
+      gap: 10px;
+    }
+    .thumbnail {
+      width: 20% !important;      
+    }
   }
