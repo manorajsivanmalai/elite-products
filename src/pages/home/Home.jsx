@@ -61,21 +61,29 @@ const Home = () => {
             imgurl: p2,
             alt: "Product 1",
             colsize: "col-lg-4",
+            name:"Men’s Intimate Foaming Wash",
+            link:"/products/men-intimate-foam"
         },
         {
             imgurl: p1,
             alt: "Product 2",
             colsize: "col-lg-8",
+            name:"Chanakya Care Shampoo",
+            link:"/products/channakya-shampoo"
         },
         {
             imgurl: p3,
             alt: "Product 6",
             colsize: "col-lg-6",
+            name:"Men Intimate Mist Spray – Bahubali",
+            link:"/products/men-intimate-mist"
         },
         {
             imgurl: p4,
             alt: "Product 7",
             colsize: "col-lg-6",
+            name:"Charcoal Face Wash",
+            link:"/products/facewash"
         },
     ]
     return (
@@ -107,17 +115,20 @@ const Home = () => {
                     </div>
                     <div className="row row-gap-4">
                         {productsec.map((item, index) =>
-                            <div className={`${item.colsize} col-md-6`} key={index}>
+                            <div className={`${item.colsize} col-md-6`}  key={index} >
+                                <Link to={item.link}> 
                                 <div className="home-prod-inner-wrapper">
                                     <a href="" className="homeproda">
                                         <img src={item.imgurl} alt={item.alt} className="w-100" />
                                         <div className="home-prod-hover-wrap">
-                                            <h3>Motion Design</h3>
-                                            <p>Lorem ipsum dolor</p>
+                                            <h3 style={{color: "rgb(207 187 187)"}}>{item.name}</h3>
+                                            {/* <p>Lorem ipsum dolor</p> */}
                                         </div>
                                     </a>
                                 </div>
+                                </Link> 
                             </div>
+                          
                         )}
                     </div>
                 </div>
