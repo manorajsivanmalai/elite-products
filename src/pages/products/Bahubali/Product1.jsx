@@ -4,7 +4,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Spray from "../../../components/Bahubali/Spray";
 
 import spray from "../../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png";
-
+import "../Bahubali/product1.css"
 import bannerimg2 from "../../../assets/images/homepage/banners/home-banner-desktop-2.webp"
 import bannerimg4 from "../../../assets/images/homepage/banners/home-banner-desktop-4.webp"
 import mist from "../../../assets/images/bahubali/intimate-mist.png"
@@ -25,7 +25,9 @@ import workouts from "../../../assets/images/bahubali/workouts.jpg"
 import needed from "../../../assets/images/bahubali/needed.jpg"
 import intimacy from "../../../assets/images/bahubali/intimacy.jpg"
 import dressing from "../../../assets/images/bahubali/dressing.jpg"
-import "../Bahubali/Product1.css"
+import bannerBg from "../../../assets/images/bahubali/banana-banner.png";
+import { useSelector } from 'react-redux';
+
 
 
 
@@ -79,15 +81,19 @@ const usageInstructions = [
 ];
 
 
-function Product1() {
+function Product1({addToCart }) {
+
+  const { products } = useSelector((state) => state.products);
+  const sprayProduct = products.find(product => product.id === 2);
+
+   
   return (
     <>
     <section className='bahubali-product'>
       <div className='banner-section'>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        navigation
-        pagination={{ clickable: true }}
+        modules={[ Autoplay]}
+
         autoplay={{ delay: 3000 }}
         loop={false}
         className="banner-swiper"
@@ -97,7 +103,7 @@ function Product1() {
             <img src={bannerimg2} alt="Banner 1" className="banner-image" />
             <div className="banner-content">
             
-              <button className="shop-now-btn">SHOP NOW</button>
+              <button className="shop-now-btn"><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
             </div>
           </div>
         </SwiperSlide>
@@ -106,7 +112,7 @@ function Product1() {
             <img src={bannerimg4} alt="Banner 1" className="banner-image" />
             <div className="banner-content">
             
-              <button className="shop-now-btn">SHOP NOW</button>
+              <button className="shop-now-btn"><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
             </div>
           </div>
         </SwiperSlide>
@@ -129,7 +135,7 @@ function Product1() {
             <div className='product-content'>
               <h3>Men Intimate Mist Spray – Bahubali</h3>
               <p>Introducing the ultimate hygiene solution for modern men – Men’s Intimate Mist Spray! Formulated with lactic acid, tea tree oil (2%), aloe vera extract, chamomile extract, and menthol, this quick-dry, non-sticky mist ensures freshness, odor control, and protection from bacteria and sweat</p>
-              <button className='buy-btn'>BUY NOW</button>
+              <button className='buy-btn'><a href="#cart" className='anchor-tag'>BUY NOW</a></button>
             </div>
           </div>
 
@@ -148,11 +154,11 @@ function Product1() {
       </div>
 
     </section>
-    <section className='bahu-product-sec3 bg-added'>
+    <section className="bahu-product-sec3 bg-added" style={{ backgroundImage: `url(${bannerBg})` }}>
       <div className='row'>
         <div className="col-md-3 d-flex align-items-start ps-5 swipe-text">
         <h2 className="text-uppercase">Men’s Intimate Mist <br></br> Spray Cares for Your</h2>
-        <button className='swipe-btn'>Shop Now</button>
+        <button className='swipe-btn'><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
         </div>
 
         <div className='col-md-9'>
@@ -211,7 +217,7 @@ function Product1() {
               <p><b>Menthol </b>– Provides a cooling sensation and instant refreshment.</p>
               <p><b>Cyclodextrin</b> – Absorbs moisture and controls odor for all-day comfort.</p>
 
-              <button className='product-benifits-btn'>BUY NOW</button>
+              <button className='product-benifits-btn'><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
             </div>
           </div>
 
@@ -224,7 +230,7 @@ function Product1() {
       </div>
 
     </section>
-    <section className='bahu-product-sec5 bg-added'>
+    <section className='bahu-product-sec5 bg-added' style={{ backgroundImage: `url(${bannerBg})` }}>
         <div className='container'>
           <h2 className='section-title text-center text-uppercase'>Unleash Freshness: Benefits & Uses</h2>
           <div className='row'>
@@ -258,13 +264,15 @@ function Product1() {
       </section>
 
 
-      <section className='bahu-product-sec6'>
-      <Spray 
-        images={[spray, mist]}
-        title="Men Intimate Mist Spray – Bahubali"
-        description="Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."
-        price={441}
-        oldPrice={500}
+      <section className='bahu-product-sec6' id='cart'>
+      <Spray
+         id={sprayProduct?.id || 2}
+        images={sprayProduct?.images || [spray, mist]}
+        title={sprayProduct?.title || "Men Intimate Mist Spray – Bahubali"}
+        description={sprayProduct?.description || "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."}
+        price={sprayProduct?.price || 441}
+        oldPrice={sprayProduct?.oldPrice || 500}
+        addToCart={addToCart}
       />
 
 

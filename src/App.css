@@ -1,3 +1,56 @@
 .main-wrapper{
     margin-top: 115px;
 }
+.shop-now-btn{
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3sease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.shop-now-btn .anchor-tag{
+    color: #000;
+}
+.shop-now-btn:hover{
+    background: #fff;
+    color: #a48100;
+
+}
+.shop-now-btn:hover .anchor-tag{
+    color: #a48100;
+}
+.buy-btn ,.product-benifits-btn{
+    border: 1px solid #88622b;
+    color: #88622b;
+    background: transparent;
+}
+.buy-btn:hover ,.product-benifits-btn:hover {
+    background: #88622b !important;
+}
+.buy-btn:hover .anchor-tag,
+.product-benifits-btn:hover .anchor-tag{
+    color: #ffffff;
+}
+.buy-btn .anchor-tag,.product-benifits-btn .anchor-tag{
+    color: #88622b;
+    background: transparent;
+}
+.product-benifits-btn{
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 12px 16px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    transition: 0.9s linear;
+    
+}
+.swipe-btn .anchor-tag{
+    color: #88622b;
+}

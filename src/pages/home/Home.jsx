@@ -1,4 +1,4 @@
-
+import {Link} from 'react-router-dom'
 
 
 //images
@@ -11,11 +11,12 @@ import bannermobimg1 from "../../assets/images/homepage/banners/home-banner-mob-
 import bannermobimg2 from "../../assets/images/homepage/banners/home-banner-mob-2.png"
 import bannermobimg3 from "../../assets/images/homepage/banners/home-banner-mob-3.png"
 import bannermobimg4 from "../../assets/images/homepage/banners/home-banner-mob-4.png"
-//import Product images
-import product1 from "../../assets/images/homepage/products/inner_project01.jpg"
-import product2 from "../../assets/images/homepage/products/inner_project02.jpg"
-import product3 from "../../assets/images/homepage/products/inner_project03.jpg"
-import product4 from "../../assets/images/homepage/products/inner_project04.jpg"
+
+
+import p1 from "../../assets/images/homepage/p1.png"
+import p2 from "../../assets/images/homepage/p2.png"
+import p3 from "../../assets/images/homepage/p3.png"
+import p4 from "../../assets/images/homepage/p4.png"
 
 
 //icons
@@ -23,6 +24,7 @@ import { GiBeamsAura } from "react-icons/gi";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from 'swiper/modules';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -56,37 +58,22 @@ const Home = () => {
     ]
     const productsec = [
         {
-            imgurl: bannermobimg1,
+            imgurl: p2,
             alt: "Product 1",
             colsize: "col-lg-4",
         },
         {
-            imgurl: bannermobimg1,
+            imgurl: p1,
             alt: "Product 2",
             colsize: "col-lg-8",
         },
         {
-            imgurl: bannermobimg1,
-            alt: "Product 3",
-            colsize: "col-lg-4",
-        },
-        {
-            imgurl: bannermobimg1,
-            alt: "Product 4",
-            colsize: "col-lg-4",
-        },
-        {
-            imgurl: bannermobimg1,
-            alt: "Product 5",
-            colsize: "col-lg-4",
-        },
-        {
-            imgurl: bannermobimg1,
+            imgurl: p3,
             alt: "Product 6",
             colsize: "col-lg-6",
         },
         {
-            imgurl: bannermobimg1,
+            imgurl: p4,
             alt: "Product 7",
             colsize: "col-lg-6",
         },
@@ -143,9 +130,10 @@ const Home = () => {
                     <div className="row justify-content-end">
                         <div className="col-lg-6 col-md-11 p-0">
                             <div className="sec-3-abt-hm-inner">
-                                <h2 className="abt-t-hm">Always focus on what benefits our customers.</h2>
-                                <p className="abt-ct-hm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat aliquid, error minus sapiente dolore unde dolorem officia assumenda excepturi? Veniam aperiam, esse quibusdam itaque non quisquam labore id unde ipsa!</p>
-                                <div className="row mt-4 row-gap-4">
+                                <h2 className="abt-t-hm">Our Story</h2>
+                                <p className="abt-ct-hm">At K'Elite Global Solutions, we believe that your personal care routine should be as unique and important as you are. We create high-quality, innovative products that blend the power of nature with advanced scientific formulations. Whether you're caring for your children’s delicate hair, maintaining freshness and hygiene, or improving your skin's appearance, our products are designed to meet your needs with care and precision.</p>
+                                <p className="abt-ct-hm">Our goal is to offer effective, eco-friendly, and safe products that empower you to feel your best every day.</p>
+                                {/* <div className="row mt-4 row-gap-4">
                                     {[...Array(4)].map((_, i) => (
                                         <div className="col-md-6 " key={i}>
                                             <div className="inner-abt-hm-sec-c">
@@ -157,8 +145,8 @@ const Home = () => {
                                             </div>
                                         </div>
                                     ))}
-                                </div>
-                                <a className="abt-hom-rm-btn">Read More</a>
+                                </div> */}
+                                <Link to='/about' className="abt-hom-rm-btn" >Read More</Link>
                             </div>
                         </div>
                     </div>
@@ -168,49 +156,54 @@ const Home = () => {
             {/* Section 4 Start */}
             <section className="home-sec-4-wrapper">
                 <div className="container">
-                    <h3 className="sec-2-prod-title">What Our Customers <br /> Are Saying</h3>
+                    <h3 className="sec-2-prod-title mb-2">Happy Customers Speak!</h3>
+                    <h5 className='hm-sec-sub-t'>Don't just take our word for it – hear from our satisfied customers!"</h5>
                     <Swiper
                         spaceBetween={30}
                         pagination={{
                             clickable:true
                         }}
                         navigation={true}
-                        slidesPerView={2}
                         loop={true}
                         modules={[Pagination, Navigation]}
                         className="mySwiper"
                         id="testimonialSwiper"
+                        breakpoints={{
+                            640: {
+                              slidesPerView:1,
+                            },
+                            768: {
+                              slidesPerView: 2,
+                              spaceBetween: 30,
+                            },
+                            1024: {
+                              slidesPerView:2,
+                              spaceBetween: 30,
+                            },
+                          }}
                     >
                         <SwiperSlide>
                             <div className="home-review-wrapper">   
-                                <h3 className="home-test-title">John P </h3>
-                                <p className="home-test-cap">Mother of 7-year-old</p>
+                                <h3 className="home-test-title">Sarah P </h3>
+                                <p className="home-test-cap"> Mother of a 7-year-old</p>
                                 <div className="home-test-start">★★★★★</div>
-                                <p className="home-test-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea, similique blanditiis tempore voluptatum tenetur impedit. Ex quam reprehenderit vitae eos, blanditiis illo, sit impedit, voluptatem eligendi accusantium veniam maiores.</p>
+                                <p className="home-test-content">Chanakya Care Shampoo has made bath time so much easier for my son! It's gentle and doesn't irritate his eyes. His hair feels soft and clean every time!"</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="home-review-wrapper">   
-                                <h3 className="home-test-title">John P </h3>
-                                <p className="home-test-cap">Mother of 7-year-old</p>
+                                <h3 className="home-test-title">Rajesh K</h3>
+                                <p className="home-test-cap">Fitness Enthusiast</p>
                                 <div className="home-test-start">★★★★★</div>
-                                <p className="home-test-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea, similique blanditiis tempore voluptatum tenetur impedit. Ex quam reprehenderit vitae eos, blanditiis illo, sit impedit, voluptatem eligendi accusantium veniam maiores.</p>
+                                <p className="home-test-content">I’ve been using the Bahubali Men Intimate Mist Spray, and I’m impressed! It keeps me fresh and comfortable all day long. Definitely a game-changer!"</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="home-review-wrapper">   
-                                <h3 className="home-test-title">John P </h3>
-                                <p className="home-test-cap">Mother of 7-year-old</p>
+                                <h3 className="home-test-title">Arun T</h3>
+                                <p className="home-test-cap">Working Professional</p>
                                 <div className="home-test-start">★★★★★</div>
-                                <p className="home-test-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea, similique blanditiis tempore voluptatum tenetur impedit. Ex quam reprehenderit vitae eos, blanditiis illo, sit impedit, voluptatem eligendi accusantium veniam maiores.</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="home-review-wrapper">   
-                                <h3 className="home-test-title">John P </h3>
-                                <p className="home-test-cap">Mother of 7-year-old</p>
-                                <div className="home-test-start">★★★★★</div>
-                                <p className="home-test-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ea, similique blanditiis tempore voluptatum tenetur impedit. Ex quam reprehenderit vitae eos, blanditiis illo, sit impedit, voluptatem eligendi accusantium veniam maiores.</p>
+                                <p className="home-test-content">"The Charcoal Face Wash is amazing! My skin feels so much cleaner and refreshed. It really works to detoxify without drying out my skin."</p>
                             </div>
                         </SwiperSlide>
                     </Swiper>
