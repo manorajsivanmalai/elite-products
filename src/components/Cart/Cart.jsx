@@ -29,7 +29,7 @@ const Cart = () => {
           quantity: cartItem ? cartItem.quantity : 1,  // Add quantity or default to 0 if not found
         };
       });
-
+      console.log(addedcart,updatedFilteredProducts);
     // Set the updated filtered products to the state
     setFilteredProducts(updatedFilteredProducts);
   }, [addedcart, products]);
@@ -49,6 +49,7 @@ const Cart = () => {
     } catch (error) {
       console.log("err :", error);
     }
+
  
 
     setFilteredProducts((prev) =>
