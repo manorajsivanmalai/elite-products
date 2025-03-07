@@ -49,7 +49,7 @@ const Navbar = () => {
                                     <li className="nav-item"><Link to="login" className="nav-link"><FaRegUser/></Link></li>
                                     {/* <li className="nav-item"><a href="" className="nav-link"><FaRegHeart/></a></li> */}
                                     <li className="nav-item"><Link to="/cart" className="nav-link"><CgShoppingBag/>{addedcart && addedcart?.length>0 && <span className="dot"></span>}</Link></li>
-                                    <li className="nav-item"><a href="" className="nav-link"><IoSearchSharp/></a></li>
+                                    {/* <li className="nav-item"><a href="" className="nav-link"><IoSearchSharp/></a></li> */}
                                 </ul>
                             </div>
                             <div className="col-7 d-md-none d-flex justify-content-end">
@@ -86,7 +86,7 @@ const Navbar = () => {
                 <div className="nav-mob-2-wrapper d-md-none d-block">
                     <ul className="mob-nav-2-ul">
                         <li className="nav-item"><NavLink to="/"  className="nav-link"><AiOutlineHome/> Home</NavLink></li>
-                        <li className="nav-item"><NavLink to="/products"  className="nav-link"><IoSearchSharp/> Shop</NavLink></li>
+                        {/* <li className="nav-item"><NavLink to="/products"  className="nav-link"><IoSearchSharp/> Shop</NavLink></li> */}
                         <li className="nav-item"><a to="/login"  className="nav-link"><FaRegUser/>Account</a></li>
                         <li className="nav-item"><Link to="/cart" className="nav-link"><CgShoppingBag/>{addedcart && addedcart?.length>0 &&  <span className="dot"></span>}Cart</Link></li>
                     </ul>

@@ -3,17 +3,27 @@
 }
 .fc-bg-added {
     background-image: url("../../../assets/images/facewash/pills.jpg");
-    background-position: 0 -511px;
+    background-position: 0 -380px;
+    padding: 50px 0;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;    
-    height: 650px;
+    /* height: 650px; */
+    margin-bottom: 20px;
 
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
 }
 
-
+.us-item h5{
+  font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.us-item p{
+  font-size: 14px;
+    color: #555;
+}
 .fc-content{
     display: flex;
     flex-direction: column;
@@ -41,11 +51,12 @@
 .btn-17:before {
   box-sizing: border-box;
   border: 0 solid;
+  color: #fff;
 }
 
 .btn-17 {
-    margin-top: 30px;
-    margin-left: 174px;
+    /* margin-top: 30px;
+    margin-left: 174px; */
 
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
@@ -200,7 +211,8 @@
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
-      height: 650px;
+      /* height: 650px; */
+      margin-bottom: 20px;
     }
    
 

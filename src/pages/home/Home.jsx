@@ -23,8 +23,7 @@ import p4 from "../../assets/images/homepage/p4.png"
 import { GiBeamsAura } from "react-icons/gi";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from 'swiper/modules';
-
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -36,24 +35,29 @@ const Home = () => {
 
     const bannerImgs = [
         {
+            imgurl: bannerimg3,
+            mobbanner: bannermobimg3,
+            alt: "Charcoal Fase Wash Banner",
+            link:"/products/facewash"
+        },
+        {
             imgurl: bannerimg1,
             mobbanner: bannermobimg1,
-            alt: "Banner image 1"
+            alt: "Chanakya Care Shampoo Banner",
+            link:"/products/channakya-shampoo"
         },
         {
             imgurl: bannerimg2,
             mobbanner: bannermobimg2,
-            alt: "Banner image 2"
-        },
-        {
-            imgurl: bannerimg3,
-            mobbanner: bannermobimg3,
-            alt: "Banner image 3"
+            alt: "Men’s Intimate Foaming Wash ",
+            link:"/products/men-intimate-foam"
+
         },
         {
             imgurl: bannerimg4,
             mobbanner: bannermobimg4,
-            alt: "Banner image 4"
+            alt: "Men Intimate Mist Spray ",
+            link:"/products/men-intimate-mist"
         },
     ]
     const productsec = [
@@ -91,15 +95,22 @@ const Home = () => {
             {/* Section 1 Start */}
             <section>
                 <div className="container-fluid">
-                    <Swiper className="mySwiper">
+                    <Swiper  className="mySwiper"
+    autoplay={{
+        delay: 2000,
+        disableOnInteraction: false, // Ensures autoplay continues even after user interaction
+    }}
+    modules={[Autoplay]}>
                         {bannerImgs.map((item, index) =>
                             <SwiperSlide key={index}>
                                 {/* <img src={item.imgurl} alt={item.alt} className="w-100" /> */}
-                                <picture>
+                               <Link to={item.link} target='_blank'>
+                               <picture>
                                     <source media="(max-width: 767px)" srcSet={item.mobbanner} />
                                     <source media="(min-width: 768px)" srcSet={item.imgurl} />
                                     <img src={item.imgurl} className="w-100" alt={item.alt} />
                                 </picture>
+                               </Link>
                             </SwiperSlide>
                         )}
                     </Swiper>
@@ -138,7 +149,7 @@ const Home = () => {
             {/* Section 3 Start */}
             <section className="home-abt-sec-3">
                 <div className="container-fluid">
-                    <div className="row justify-content-end">
+                    <div className="row justify-content-center">
                         <div className="col-lg-6 col-md-11 p-0">
                             <div className="sec-3-abt-hm-inner">
                                 <h2 className="abt-t-hm">Our Story</h2>

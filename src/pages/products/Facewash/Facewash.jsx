@@ -8,7 +8,7 @@ import fashwashbanner from "../../../assets/images/facewash/facewash-banner.webp
 import fc1 from "../../../assets/images/facewash/fc-1.jpg";
 import fc2 from "../../../assets/images/facewash/fc-2.png";
 import fc3 from "../../../assets/images/facewash/fc-3.png";
-import usage from "../../../assets/images/facewash/how-to-use-img.webp";
+import usage from "../../../assets/images/facewash/how-to-use-img.png";
 import { useSelector } from "react-redux";
 
 const ingredients = [
@@ -169,7 +169,6 @@ function Facewash({ addToCart }) {
                 {steps.map((item, index) => (
                   <div key={index} className="col-md-6 p-3">
                    <div className="us-item">
-                    <img src="" alt="image" />
                       <h5>{item.title}</h5>
                       <p>{item.desc}</p>
                    </div>

@@ -25,7 +25,25 @@ import workouts from "../../../assets/images/bahubali/workouts.jpg"
 import needed from "../../../assets/images/bahubali/needed.jpg"
 import intimacy from "../../../assets/images/bahubali/intimacy.jpg"
 import dressing from "../../../assets/images/bahubali/dressing.jpg"
-import bannerBg from "../../../assets/images/bahubali/banana-banner.png";
+import bannerBg from "../../../assets/images/bahubali/banana-banner.png"
+
+import body from "../../../assets/images/bahubali/body.png"
+import needs from "../../../assets/images/bahubali/needs.png"
+import skin from "../../../assets/images/bahubali/skin-protection.png"
+import fresh from "../../../assets/images/bahubali/fresh.png"
+import hand from "../../../assets/images/bahubali/hand.png"
+import discomfort from "../../../assets/images/bahubali/dermatology.png"
+import success from "../../../assets/images/bahubali/success.png"
+import bacteria from "../../../assets/images/bahubali/bacteria.png"
+
+
+
+import depilation from "../../../assets/images/bahubali/depilation.png"
+
+
+
+
+
 import { useSelector } from 'react-redux';
 
 
@@ -37,27 +55,27 @@ import { useSelector } from 'react-redux';
 const points = [
   {
     text: "Hygiene – Keeps intimate areas fresh and clean.",
-    img: selfconfidence, 
+    img: hand, 
   },
   {
     text: "Comfort – Prevents irritation, sweat, and discomfort.",
-    img: selfconfidence,
+    img: discomfort,
   },
   {
     text: "Confidence – Eliminates unwanted odors instantly.",
-    img:selfconfidence,
+    img:success,
   },
   {
     text: "Protection – Fights bacteria, fungi, and infections.",
-    img: selfconfidence,
+    img: bacteria,
   },
   {
     text: "Skin Health – Maintains pH balance and soothes skin.",
-    img: selfconfidence,
+    img: skin,
   },
   {
     text: "Lifestyle – Perfect for work, gym, travel, and daily hygiene.",
-    img: selfconfidence,
+    img: needs,
   },
 ];
 const benefits = [
@@ -73,13 +91,12 @@ const usageInstructions = [
   { text: "Shake well before use.", img: Shake },
   { text: "Spray from a distance of 5-8 cm.", img: distance },
   { text: "Use before & after intimate activities or workouts.", img: workouts },
-  { text: "Use before & after intimate activities or workouts.", img: needed },
-  { text: "Use before & after intimate activities or workouts.", img: intimacy },
-  { text: "Use before & after intimate activities or workouts.", img: dressing },
-  { text: "Use before & after intimate activities or workouts.", img: dressing },
+  { text: "Let It Dry: Wait a few seconds for the mist to dry—no need to rinse.", img: needed },
+  { text: "Use again during the day, especially if feeling sweaty or uncomfortable", img: intimacy },
+  { text: "Allow a few seconds for the spray to dry before dressing", img: dressing },
  
 ];
-
+  
 
 function Product1({addToCart }) {
 

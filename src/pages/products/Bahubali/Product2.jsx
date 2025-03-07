@@ -26,6 +26,10 @@ import needed from "../../../assets/images/bahubali/needed.jpg"
 import intimacy from "../../../assets/images/bahubali/intimacy.jpg"
 import dressing from "../../../assets/images/bahubali/dressing.jpg"
 import bannerBg from "../../../assets/images/bahubali/banana-banner.png";
+import phmeter from "../../../assets/images/bahubali/ph-meter.png"
+import fresh from "../../../assets/images/bahubali/fresh.png"
+import odorirritation from "../../../assets/images/bahubali/body.png"
+import skinprotection from "../../../assets/images/bahubali/skin-protection.png"
 import { useSelector } from 'react-redux';
 
 
@@ -37,19 +41,19 @@ import { useSelector } from 'react-redux';
 const points = [
   {
     text: "Prevents odor & irritation",
-    img: selfconfidence, 
+    img: odorirritation, 
   },
   {
     text: "Maintains pH balance",
-    img: selfconfidence,
+    img: phmeter,
   },
   {
     text: "Keeps you fresh all day",
-    img:selfconfidence,
+    img:fresh,
   },
   {
     text: "Gentle & soothing for sensitive skin",
-    img: selfconfidence,
+    img: skinprotection,
   },
 
  
@@ -64,13 +68,10 @@ const points = [
 //   { text: "Perfect for gym, work, and travel hygiene.", img: six },
 // ];
 const usageInstructions = [
-  { text: "Shake well before use.", img: Shake },
-  { text: "Spray from a distance of 5-8 cm.", img: distance },
-  { text: "Use before & after intimate activities or workouts.", img: workouts },
-  { text: "Use before & after intimate activities or workouts.", img: needed },
-  { text: "Use before & after intimate activities or workouts.", img: intimacy },
-  { text: "Use before & after intimate activities or workouts.", img: dressing },
-  { text: "Use before & after intimate activities or workouts.", img: dressing },
+  { text: "Pump a small amount of the foaming wash onto your palm.", img: Shake },
+  { text: "Massage the foam onto the intimate area for 20-30 seconds", img:needed  },
+  { text: "Wash off with water and ensure no residue remains.", img: workouts },
+  { text: "Use a clean, soft towel to gently dry the area.", img: distance }
  
 ];
 
