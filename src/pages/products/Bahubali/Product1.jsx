@@ -270,7 +270,7 @@ function Product1({addToCart }) {
         images={sprayProduct?.images || [spray, mist]}
         title={sprayProduct?.title || "Men Intimate Mist Spray – Bahubali"}
         description={sprayProduct?.description || "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."}
-        price={sprayProduct?.price || 441}
+        price={sprayProduct?.price || 291}
         oldPrice={sprayProduct?.oldPrice || 500}
         addToCart={addToCart}
       />

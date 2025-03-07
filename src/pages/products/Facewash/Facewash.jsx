@@ -132,8 +132,8 @@ function Facewash({ addToCart }) {
             images={CharcoalFaceWash?.images || [fc2, fc1, fc3]}
             title={CharcoalFaceWash?.title || "Charcoal Face Wash"}
             description={CharcoalFaceWash?.description || "Charcoal Face Wash Cares for Your Skin, Keeping It Clean, Clear, and Fresh!"}
-            price={CharcoalFaceWash?.price || 350}
-            oldPrice={CharcoalFaceWash?.oldPrice || 450}
+            price={CharcoalFaceWash?.price || 491}
+            oldPrice={CharcoalFaceWash?.oldPrice || 550}
             addToCart={addToCart}
           />
         </section>

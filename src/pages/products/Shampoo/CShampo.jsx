@@ -84,8 +84,8 @@ function CShampo({ addToCart }) {
           images={CharcoalShampoo?.images || [shampoo1,shampoo]}
           title={CharcoalShampoo?.title  || "Chanakya Care Shampoo"}
           description={CharcoalShampoo?.description || "Let Kids be champions with the right Shampoo because strong hair, healthy scalps and confidence start at an early age."}
-          price={CharcoalShampoo?.price || 541}
-          oldPrice={CharcoalShampoo?.oldPrice || 600}   
+          price={CharcoalShampoo?.price || 691}
+          oldPrice={CharcoalShampoo?.oldPrice || 730}   
           addToCart={addToCart}>
 
         </Spray>
