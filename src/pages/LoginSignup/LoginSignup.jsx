@@ -12,8 +12,8 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser,setLoading } from "../../features/users/authSlice";
 import { TiTick } from "react-icons/ti";
-import Popup from "../../Components/popupemailverify/Popup"
-import Popupforgetpassword from "../../Components/popupemailverify/popupforgetpassword";
+import Popup from "../../components/popupemailverify/Popup.jsx"
+import Popupforgetpassword from "../../components/popupemailverify/Popupforgetpassword.jsx";
 const API_URL = "http://localhost:5000";
 const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
 const GoogleLoginButton = ({ btntext }) => {
