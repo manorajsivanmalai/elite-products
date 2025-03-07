@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./Policy.css"
+import "./policy.css"
 
 const Policy = () => {
   return (
