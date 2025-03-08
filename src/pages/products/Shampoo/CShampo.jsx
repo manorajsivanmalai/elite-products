@@ -42,7 +42,7 @@ function CShampo({ addToCart }) {
             <div className="cshampo-sec-2-bg">
               <div className="sec-2-cshampoo-inner">
                 <h3 className="sec-2-c-shampo-title">
-                  Gentel care for Growing Kids (5-15 years)
+                  Gental care for Growing Kids (5-15 years)
                 </h3>
                 <div className="row sec-2-c-shampo-row align-items-center">
                   <div className="col-lg-4">
@@ -81,7 +81,7 @@ function CShampo({ addToCart }) {
         <section style={{ backgroundColor: "#ffff" }} className="pt-4">
         <Spray 
           id={CharcoalShampoo?.id || 4}
-          images={ [shampoo1,shampoo]}
+          images={[shampoo1,shampoo]}
           title={CharcoalShampoo?.title  || "Chanakya Care Shampoo"}
           description={CharcoalShampoo?.description || "Let Kids be champions with the right Shampoo because strong hair, healthy scalps and confidence start at an early age."}
           price={CharcoalShampoo?.price || 691}

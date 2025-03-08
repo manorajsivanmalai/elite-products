@@ -1,13 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchProducts } from '../../api/fetchProduct';
-
+import shampoo1 from "../../assets/images/shampoo/shampoo-1.png";
+import shampoo from "../../assets/images/shampoo/shampo.png";
+import bahubali1 from "../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png"
+import  bahubali2 from "../../assets/images/bahubali/intimate-mist.png";
+import  foam1 from  "../../assets/images/bahubali/foam-2.jpg";
+import foam2 from "../../assets/images/bahubali/foam-1.png";
+import fc1 from "../../assets/images/facewash/fc-1.jpg";
+import fc2 from "../../assets/images/facewash/fc-2.png";
+import fc3 from "../../assets/images/facewash/fc-3.png";
 const initialState = {
   products:[
     {
       "id": 4,
       "images": [
-        "../../src/assets/images/shampoo/shampoo-1.png",
-        "../../src/assets/images/shampoo/shampo.png"
+        shampoo1,
+        shampoo
       ],
       "title": "Chanakya Care Shampoo",
       "description": "Let Kids be champions with the right Shampoo because strong hair, healthy scalps and confidence start at an early age.",
@@ -19,8 +27,8 @@ const initialState = {
     {
       "id": 2,
       "images": [
-        "../../src/assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png",
-        "../../src/assets/images/bahubali/intimate-mist.png"
+       bahubali1,
+       bahubali2
       ],
       "title": "Men Intimate Mist Spray – Bahubali",
       "description": "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control.",
@@ -32,8 +40,8 @@ const initialState = {
     {
       "id": 1,
       "images": [
-        "../../src/assets/images/bahubali/foam-2.jpg",
-        "../../src/assets/images/bahubali/foam-1.png"
+        foam1,
+        foam2,
       ],
       "title": "Men’s Intimate Foaming Wash",
       "description": "Men’s Intimate Foaming Wash is specially formulated to maintain hygiene, freshness, and confidence...",
@@ -45,9 +53,9 @@ const initialState = {
     {
       "id": 3,
       "images": [
-        "../../src/assets/images/facewash/fc-1.jpg",
-        "../../src/assets/images/facewash/fc-2.png",
-        "../../src/assets/images/facewash/fc-3.png"
+        fc1,
+        fc2,
+        fc3
       ],
       "title": "Charcoal Face Wash",
       "description": "Charcoal Face Wash Cares for Your Skin, Keeping It Clean, Clear, and Fresh!",

@@ -175,8 +175,8 @@ function Checkout() {
                       field !== "state" &&
                       field !== "city" && (
                         <div key={field} className="form-group col-md-6">
-                          <label htmlFor={field}>
-                            {field.charAt(0).toUpperCase() + field.slice(1)}:
+                          <label htmlFor={field==="address1" ?"address 1":field}>
+                            {field==="address1" ?"Address":field.charAt(0).toUpperCase() + field.slice(1)}:
                           </label>
                           <input
                             type="text"
@@ -185,7 +185,7 @@ function Checkout() {
                             name={field}
                             value={userDetails[field]}
                             onChange={handleInputChange}
-                            placeholder={`Enter ${field}`}
+                            placeholder={`Enter ${field==="address1" ?"address ":field}`}
                           />
                           {formErrors[field] && (
                             <p className="error">{formErrors[field]}</p>
