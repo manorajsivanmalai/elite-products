@@ -74,6 +74,10 @@
         flex-direction: column;
         align-items: center;
 }
+.order-btns{
+    gap: 27px;
+    align-items: center;
+}
 .des-con h5{
     font-size: 15px;
     margin-bottom: 10px;
@@ -106,6 +110,9 @@
     }
     .chk-dtls{
         margin: 0 !important;
+    }
+    .order-btns{
+        display: block;
     }
 
    

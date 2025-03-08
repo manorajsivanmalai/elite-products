@@ -39,7 +39,7 @@ const Footer = ({ cartItems }) => {
                 </div>
                 <div className="footer-r-2">
                     <div className="container">
-                        <p>Coppyright 2025 - All right reserved</p>
+                        <p>© 2025 K Elite Global Solutions. All rights reserved.</p>
                     </div>
                 </div>
             </footer>

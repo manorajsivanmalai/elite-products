@@ -127,6 +127,9 @@
     .banner-bg-cshampo{
         height: 600px;
     }
+    .cshampo-sec-2-bg{
+        aspect-ratio: auto;
+    }
 }
 
 @media only screen and (max-width:767px){
