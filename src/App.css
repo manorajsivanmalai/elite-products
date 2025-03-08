@@ -68,19 +68,19 @@
 
 @media only screen and (min-width:768px) and (max-width:1024px){
     .banner-slide{
-     height:549px;
+     height:549px !important;
     }
     .banner-swiper{
-     height:549px;
+     height:549px !important;
 
     }
     }
     @media only screen and (min-width:768px) and (max-width:1023px){
     .banner-slide{
-     height:407px;
+     height:407px !important;
     }
     .banner-swiper{
-        height:407px;
+        height:407px !important;
 
    
        }
