@@ -62,7 +62,7 @@ const Navbar = () => {
                                             <button className="nav-mob-close-btn" style={!navtoggle?{"transform":"rotate(166deg)","translate":"1s"}:{}} onClick={()=>setNavtoggle(false)}><CgClose/></button>
                                         </div>
                                         <ul className="nav-mob-p-ul">
-                                            <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+                                            <li className="nav-item"><Link to="/"  onClick={()=>setNavtoggle(false)}  className="nav-link">Home</Link></li>
                                             <li className="nav-item dropdown-li"><Link to="" className="nav-link">Products <MdOutlineKeyboardArrowDown/></Link>
                                                 <ul  className="nav-mob-p-ul ul-dropdown">
                                                 <li className="nav-item"><Link to="/products/channakya-shampoo" onClick={()=>setNavtoggle(false)} className="nav-link ">Chanakya Care Shampoo</Link></li>
@@ -72,9 +72,9 @@ const Navbar = () => {
                                                 </ul>
                                             </li> 
 
-                                            <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
-                                            <li className="nav-item"><Link to="/contact" className="nav-link">Contact</Link></li>
-                                            <li className="nav-item"><Link to="/cart" className="nav-link">Cart</Link></li>
+                                            <li className="nav-item"><Link to="/about" onClick={()=>setNavtoggle(false)}  className="nav-link">About</Link></li>
+                                            <li className="nav-item"><Link to="/contact"  onClick={()=>setNavtoggle(false)}  className="nav-link">Contact</Link></li>
+                                            <li className="nav-item"><Link to="/cart"  onClick={()=>setNavtoggle(false)}  className="nav-link">Cart</Link></li>
                                         </ul>
                                     </div>
                                 
