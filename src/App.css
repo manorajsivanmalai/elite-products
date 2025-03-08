@@ -54,3 +54,10 @@
 .swipe-btn .anchor-tag{
     color: #88622b;
 }
+
+@media only screen and (max-width:767px){
+    .shop-now-btn{
+        padding: 7px 15px;
+        font-size: 13px;
+    }
+}
