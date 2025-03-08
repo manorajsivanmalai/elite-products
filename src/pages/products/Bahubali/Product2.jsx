@@ -10,7 +10,8 @@ import bannerimg4 from "../../../assets/images/homepage/banners/home-banner-desk
 import foam1 from "../../../assets/images/bahubali/foam-1.png"
 import selfconfidence from "../../../assets/images/bahubali/self_confidence.jpg";
 import foam2 from "../../../assets/images/bahubali/foam-2.jpg"
-
+import bannermobimg2 from "../../../assets/images/homepage/banners/home-banner-mob-2.png"
+import bannermobimg4 from "../../../assets/images/homepage/banners/home-banner-mob-3.png"
 // import seven from "../../../assets/images/bahubali/pH balance.jpg"
 // import one from "../../../assets/images/bahubali/sweat.jpg";
 // import two from "../../../assets/images/bahubali/odor.jpg";
@@ -90,24 +91,32 @@ function Product2({addToCart}) {
         loop={false}
         className="banner-swiper"
       >
-          <SwiperSlide>
-          <div className="banner-slide">
-            <img src={bannerimg2} alt="Banner 1" className="banner-image" />
-            <div className="banner-content">
-            
-              <button className="shop-now-btn"><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="banner-slide">
-            <img src={bannerimg4} alt="Banner 1" className="banner-image" />
-            <div className="banner-content">
-            
-              <button className="shop-now-btn"><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
-            </div>
-          </div>
-        </SwiperSlide>
+         <SwiperSlide>
+                       <div className="banner-slide">
+                         <picture>
+                           <source media="(max-width: 767px)" srcSet={bannermobimg2} />
+                           <source media="(min-width: 768px)" srcSet={bannerimg2} />
+                           <img src={bannerimg2} className="w-100 banner-image" alt="Banner 1" />
+                         </picture>
+                         <div className="banner-content">
+         
+                           <button className="shop-now-btn"><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
+                         </div>
+                       </div>
+                     </SwiperSlide>
+                     <SwiperSlide>
+                       <div className="banner-slide">
+                       <picture>
+                           <source media="(max-width: 767px)" srcSet={bannermobimg4} />
+                           <source media="(min-width: 768px)" srcSet={bannerimg4} />
+                           <img src={bannerimg4} className="w-100 banner-image" alt="Banner 1" />
+                         </picture>
+                         <div className="banner-content">
+         
+                           <button className="shop-now-btn"><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
+                         </div>
+                       </div>
+                     </SwiperSlide>
 
 
 
