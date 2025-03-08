@@ -60,4 +60,28 @@
         padding: 7px 15px;
         font-size: 13px;
     }
+    .bahu-product-sec2{
+        margin-top: 0;
+    }
 }
+
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .banner-slide{
+     height:549px;
+    }
+    .banner-swiper{
+     height:549px;
+
+    }
+    }
+    @media only screen and (min-width:768px) and (max-width:1023px){
+    .banner-slide{
+     height:407px;
+    }
+    .banner-swiper{
+        height:407px;
+
+   
+       }
+    }
