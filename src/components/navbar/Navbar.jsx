@@ -65,10 +65,10 @@ const Navbar = () => {
                                             <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
                                             <li className="nav-item dropdown-li"><Link to="" className="nav-link">Products <MdOutlineKeyboardArrowDown/></Link>
                                                 <ul  className="nav-mob-p-ul ul-dropdown">
-                                                <li className="nav-item"><Link to="/products/channakya-shampoo" className="nav-link">Chanakya Care Shampoo</Link></li>
-                                                <li className="nav-item"><Link to="/products/facewash" className="nav-link">Charcoal face wash</Link></li>
-                                                <li className="nav-item"><Link to="/products/men-intimate-mist" className="nav-link">Men Intimate Mist Spray </Link></li>
-                                                <li className="nav-item"><Link to="/products/men-intimate-foam" className="nav-link">Men’s Intimate Foaming Wash </Link></li>
+                                                <li className="nav-item"><Link to="/products/channakya-shampoo" onClick={()=>setNavtoggle(false)} className="nav-link ">Chanakya Care Shampoo</Link></li>
+                                                <li className="nav-item"><Link to="/products/facewash"  onClick={()=>setNavtoggle(false)}  className="nav-link">Charcoal face wash</Link></li>
+                                                <li className="nav-item"><Link to="/products/men-intimate-mist"  onClick={()=>setNavtoggle(false)}  className="nav-link">Men Intimate Mist Spray </Link></li>
+                                                <li className="nav-item"><Link to="/products/men-intimate-foam"  onClick={()=>setNavtoggle(false)}  className="nav-link">Men’s Intimate Foaming Wash </Link></li>
                                                 </ul>
                                             </li> 
 
