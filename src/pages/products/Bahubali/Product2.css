@@ -295,7 +295,7 @@
 
 @media (max-width: 767px) {
     .banner-swiper {
-        height: 300px;
+        height: unset;
     }
     
     .banner-slide {

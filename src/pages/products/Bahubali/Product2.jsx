@@ -160,6 +160,24 @@ function Product2({addToCart}) {
             loop={true}
             // pagination={{ clickable: true }}
             autoplay={{ delay: 3000 }}
+            breakpoints={{
+              0: {  // Ensure mobile starts at 0px
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
           >
             {points.map((item, index) => (
               <SwiperSlide key={index}>
@@ -248,7 +266,7 @@ function Product2({addToCart}) {
       <section className='bahu-product-sec6' id='cart'>
       <Spray 
         id={foamingProduct?.id ||1}
-        images={foamingProduct?.images || [foam2, foam1]}
+        images={[foam2, foam1]}
         title={foamingProduct?.title || "Men’s Intimate Foaming Wash "}
         description={foamingProduct?.description  || "Men’s Intimate Foaming Wash is specially formulated to maintain hygiene, freshness, and confidence. Enriched with Lactic Acid, Tea Tree Oil, Seabuckthorn Oil, Cranberry Extract, and Aloe Vera, it gently cleanses while preventing odor, irritation, and infections. With a refreshing banana fragrance, this pH-balanced formula ensures all-day comfort."}
         price={foamingProduct?.price || 591}

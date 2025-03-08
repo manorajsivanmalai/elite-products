@@ -81,7 +81,7 @@ function CShampo({ addToCart }) {
         <section style={{ backgroundColor: "#ffff" }} className="pt-4">
         <Spray 
           id={CharcoalShampoo?.id || 4}
-          images={CharcoalShampoo?.images || [shampoo1,shampoo]}
+          images={ [shampoo1,shampoo]}
           title={CharcoalShampoo?.title  || "Chanakya Care Shampoo"}
           description={CharcoalShampoo?.description || "Let Kids be champions with the right Shampoo because strong hair, healthy scalps and confidence start at an early age."}
           price={CharcoalShampoo?.price || 691}

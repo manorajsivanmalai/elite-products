@@ -129,7 +129,7 @@ function Facewash({ addToCart }) {
         <section className="bahu-product-sec6">
           <Spray
             id={CharcoalFaceWash?.id || 3}
-            images={CharcoalFaceWash?.images || [fc2, fc1, fc3]}
+            images={ [fc2, fc1, fc3]}
             title={CharcoalFaceWash?.title || "Charcoal Face Wash"}
             description={CharcoalFaceWash?.description || "Charcoal Face Wash Cares for Your Skin, Keeping It Clean, Clear, and Fresh!"}
             price={CharcoalFaceWash?.price || 491}
