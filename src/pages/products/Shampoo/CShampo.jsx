@@ -4,6 +4,14 @@ import shampoo1 from "../../../assets/images/shampoo/shampoo-1.png";
 import shampoo from "../../../assets/images/shampoo/shampo.png";
 import Spray from "../../../components/Bahubali/Spray";
 
+
+import shamppro1 from "../../../assets/images/shampoo/chanakya-care-shampoo-1.jpg";
+import shamppro2 from "../../../assets/images/shampoo/chanakya-care-shampoo-2.jpg";
+import shamppro3 from "../../../assets/images/shampoo/chanakya-care-shampoo-3.jpg";
+import shamppro4 from "../../../assets/images/shampoo/chanakya-care-shampoo-4.jpg";
+import shamppro5 from "../../../assets/images/shampoo/chanakya-care-shampoo-5.jpg";
+import shamppro9 from "../../../assets/images/shampoo/chanakya-care-shampoo-9.jpg";
+
 //css
 import { useSelector } from 'react-redux'
 import "./CShampo.css";
@@ -81,7 +89,7 @@ function CShampo({ addToCart }) {
         <section style={{ backgroundColor: "#ffff" }} className="pt-4">
         <Spray 
           id={CharcoalShampoo?.id || 4}
-          images={[shampoo1,shampoo]}
+          images={[shamppro1,shamppro2,shamppro3,shamppro4,shamppro5,shamppro9]}
           title={CharcoalShampoo?.title  || "Chanakya Care Shampoo"}
           description={CharcoalShampoo?.description || "Let Kids be champions with the right Shampoo because strong hair, healthy scalps and confidence start at an early age."}
           price={CharcoalShampoo?.price || 691}

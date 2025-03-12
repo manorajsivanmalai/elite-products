@@ -16,6 +16,7 @@ import LoginSignup from "./pages/LoginSignup/LoginSignup"
 import ResetPassword from "./pages/resetpassword/ResetPassword"
 import ProtectedResetRoute from "./pages/resetpassword/ProtectedResetRoute"
 import Account from "./pages/account/Account"
+import AllProducts from "./pages/AllProducts/AllProducts.jsx";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import "./App.css";
 import { useCallback, useEffect, useState } from "react";
@@ -128,6 +129,7 @@ const App = () => {
           <Route path="/checkout" element={<Checkout   />} /> 
           <Route path="/products/channakya-shampoo" element={<CShampo  addToCart={addToCart} />} /> 
           <Route path="/policy" element={<Policy />} />
+          <Route path="/allproducts" element={<AllProducts />} />
          <Route
             path="/reset-password"
             element={

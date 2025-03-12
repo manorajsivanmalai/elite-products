@@ -10,7 +10,7 @@ import bannerimg4 from "../../../assets/images/homepage/banners/home-banner-desk
 import bannermobimg2 from "../../../assets/images/homepage/banners/home-banner-mob-2.png"
 import bannermobimg4 from "../../../assets/images/homepage/banners/home-banner-mob-3.png"
 import mist from "../../../assets/images/bahubali/intimate-mist.png"
-import selfconfidence from "../../../assets/images/bahubali/self_confidence.jpg";
+
 import intiamte from "../../../assets/images/bahubali/Men intimate mist.jpg"
 
 import seven from "../../../assets/images/bahubali/pH balance.jpg"
@@ -29,18 +29,23 @@ import intimacy from "../../../assets/images/bahubali/intimacy.jpg"
 import dressing from "../../../assets/images/bahubali/dressing.jpg"
 import bannerBg from "../../../assets/images/bahubali/banana-banner.png"
 
-import body from "../../../assets/images/bahubali/body.png"
+
 import needs from "../../../assets/images/bahubali/needs.png"
 import skin from "../../../assets/images/bahubali/skin-protection.png"
-import fresh from "../../../assets/images/bahubali/fresh.png"
+
 import hand from "../../../assets/images/bahubali/hand.png"
 import discomfort from "../../../assets/images/bahubali/dermatology.png"
 import success from "../../../assets/images/bahubali/success.png"
 import bacteria from "../../../assets/images/bahubali/bacteria.png"
 
 
+//add to cart component images
 
-import depilation from "../../../assets/images/bahubali/depilation.png"
+import sparyproduct1 from "../../../assets/images/spray-bahu/sparay-product-1.png"
+import sparyproduct2 from "../../../assets/images/spray-bahu/sparay-product-2.png"
+import sparyproduct3 from "../../../assets/images/spray-bahu/sparay-product-3.png"
+import sparyproduct4 from "../../../assets/images/spray-bahu/sparay-product-4.png"
+
 
 
 
@@ -311,7 +316,7 @@ function Product1({ addToCart }) {
       <section className='bahu-product-sec6' id='cart'>
         <Spray
           id={sprayProduct?.id || 2}
-          images={[spray, mist]}
+          images={[sparyproduct1, sparyproduct2, sparyproduct3, sparyproduct4]}
           title={sprayProduct?.title || "Men Intimate Mist Spray – Bahubali"}
           description={sprayProduct?.description || "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."}
           price={sprayProduct?.price || 291}

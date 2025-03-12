@@ -32,7 +32,7 @@ const Navbar = () => {
                             <div className="col-lg-5 col-md-6 d-md-block d-none">
                                 <ul className="nav-ul-1-wrapper">
                                     <li className="nav-item"><NavLink to="/" className="nav-link">Home</NavLink></li>
-                                    <li className="nav-item dropdown-li"><Link to="" className="nav-link">Products <MdOutlineKeyboardArrowDown/></Link>
+                                    <li className="nav-item dropdown-li"><Link to="/allproducts" className="nav-link">Products <MdOutlineKeyboardArrowDown/></Link>
                                             <ul  className="nav-mob-p-ul ul-dropdown">
                                             <li className="nav-item"><Link to="/products/channakya-shampoo" className="nav-link">Chanakya Care Shampoo</Link></li>
                                                 <li className="nav-item"><Link to="/products/facewash" className="nav-link">Charcoal face wash</Link></li>
