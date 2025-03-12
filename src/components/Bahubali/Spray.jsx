@@ -61,13 +61,13 @@ const Spray = ({id, images, title, description, price, oldPrice, addToCart }) =>
           <h2 className="product-title">{title}</h2>
           <p className="product-description">{description}</p>
 
-          <div className="star-rating">
+          {/* <div className="star-rating">
             <FaStar className="star" />
             <FaStar className="star" />
             <FaStar className="star" />
             <FaStar className="star" />
             <FaStar className="star" />
-          </div>
+          </div> */}
 
           <div className="pricing">
             <span className="product-price">₹{price * quantity}</span>

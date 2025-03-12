@@ -31,6 +31,11 @@ import phmeter from "../../../assets/images/bahubali/ph-meter.png"
 import fresh from "../../../assets/images/bahubali/fresh.png"
 import odorirritation from "../../../assets/images/bahubali/body.png"
 import skinprotection from "../../../assets/images/bahubali/skin-protection.png"
+import drops from "../../../assets/images/bahubali/drops.png"
+import massage from "../../../assets/images/bahubali/massage.png"
+import dispenser from "../../../assets/images/bahubali/dispenser.png"
+import towel from "../../../assets/images/bahubali/towel.png"
+
 import { useSelector } from 'react-redux';
 
 
@@ -69,10 +74,10 @@ const points = [
 //   { text: "Perfect for gym, work, and travel hygiene.", img: six },
 // ];
 const usageInstructions = [
-  { text: "Pump a small amount of the foaming wash onto your palm.", img: Shake },
-  { text: "Massage the foam onto the intimate area for 20-30 seconds", img:needed  },
-  { text: "Wash off with water and ensure no residue remains.", img: workouts },
-  { text: "Use a clean, soft towel to gently dry the area.", img: distance }
+  { text: "Pump a small amount of the foaming wash onto your palm.", img: dispenser },
+  { text: "Massage the foam onto the intimate area for 20-30 seconds", img:massage  },
+  { text: "Wash off with water and ensure no residue remains.", img: drops },
+  { text: "Use a clean, soft towel to gently dry the area.", img: towel }
  
 ];
 
@@ -279,7 +284,7 @@ function Product2({addToCart}) {
         title={foamingProduct?.title || "Men’s Intimate Foaming Wash "}
         description={foamingProduct?.description  || "Men’s Intimate Foaming Wash is specially formulated to maintain hygiene, freshness, and confidence. Enriched with Lactic Acid, Tea Tree Oil, Seabuckthorn Oil, Cranberry Extract, and Aloe Vera, it gently cleanses while preventing odor, irritation, and infections. With a refreshing banana fragrance, this pH-balanced formula ensures all-day comfort."}
         price={foamingProduct?.price || 591}
-        oldPrice={foamingProduct?.oldPrice || 291}
+        oldPrice={foamingProduct?.oldPrice || 691}
         addToCart={addToCart}
       />
 

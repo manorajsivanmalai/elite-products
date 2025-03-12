@@ -15,3 +15,36 @@
 .footer-ul-wrapper li.nav-item .nav-link{
     padding: 5px 0;
 }
+.footer-ul-social{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    margin-top: 25px;
+}
+.footer-ul-social .nav-item{
+    border: 1px solid #5d5d5d;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 0;
+}
+.footer-ul-social .nav-item .nav-link{
+    color: #0c0c0c;
+}
+.footer-call{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 15px;
+}
+.ftr-title{
+    font-weight: 700;
+}
