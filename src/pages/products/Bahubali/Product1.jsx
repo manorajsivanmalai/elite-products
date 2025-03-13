@@ -41,10 +41,7 @@ import bacteria from "../../../assets/images/bahubali/bacteria.png"
 
 //add to cart component images
 
-import sparyproduct1 from "../../../assets/images/spray-bahu/sparay-product-1.png"
-import sparyproduct2 from "../../../assets/images/spray-bahu/sparay-product-2.png"
-import sparyproduct3 from "../../../assets/images/spray-bahu/sparay-product-3.png"
-import sparyproduct4 from "../../../assets/images/spray-bahu/sparay-product-4.png"
+import sparyproduct5 from "../../../assets/images/spray-bahu/sparay-product-5.png"
 
 
 
@@ -316,7 +313,7 @@ function Product1({ addToCart }) {
       <section className='bahu-product-sec6' id='cart'>
         <Spray
           id={sprayProduct?.id || 2}
-          images={[sparyproduct1, sparyproduct2, sparyproduct3, sparyproduct4]}
+          images={[ sparyproduct5]}
           title={sprayProduct?.title || "Men Intimate Mist Spray – Bahubali"}
           description={sprayProduct?.description || "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."}
           price={sprayProduct?.price || 291}

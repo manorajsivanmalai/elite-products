@@ -5,12 +5,9 @@ import shampoo from "../../../assets/images/shampoo/shampo.png";
 import Spray from "../../../components/Bahubali/Spray";
 
 
-import shamppro1 from "../../../assets/images/shampoo/chanakya-care-shampoo-1.jpg";
-import shamppro2 from "../../../assets/images/shampoo/chanakya-care-shampoo-2.jpg";
-import shamppro3 from "../../../assets/images/shampoo/chanakya-care-shampoo-3.jpg";
-import shamppro4 from "../../../assets/images/shampoo/chanakya-care-shampoo-4.jpg";
-import shamppro5 from "../../../assets/images/shampoo/chanakya-care-shampoo-5.jpg";
-import shamppro9 from "../../../assets/images/shampoo/chanakya-care-shampoo-9.jpg";
+
+import shamppro11 from "../../../assets/images/shampoo/chanakya-care-shampoo-11.jpg";
+import shamppro10 from "../../../assets/images/shampoo/chanakya-care-shampoo-10.jpg";
 
 //css
 import { useSelector } from 'react-redux'
@@ -50,7 +47,7 @@ function CShampo({ addToCart }) {
             <div className="cshampo-sec-2-bg">
               <div className="sec-2-cshampoo-inner">
                 <h3 className="sec-2-c-shampo-title">
-                  Gental care for Growing Kids (5-15 years)
+                Gentle care for Growing Kids (5-15 years)
                 </h3>
                 <div className="row sec-2-c-shampo-row align-items-center">
                   <div className="col-lg-4">
@@ -89,7 +86,7 @@ function CShampo({ addToCart }) {
         <section style={{ backgroundColor: "#ffff" }} className="pt-4">
         <Spray 
           id={CharcoalShampoo?.id || 4}
-          images={[shamppro1,shamppro2,shamppro3,shamppro4,shamppro5,shamppro9]}
+          images={[shamppro10, shamppro11]}
           title={CharcoalShampoo?.title  || "Chanakya Care Shampoo"}
           description={CharcoalShampoo?.description || "Let Kids be champions with the right Shampoo because strong hair, healthy scalps and confidence start at an early age."}
           price={CharcoalShampoo?.price || 691}

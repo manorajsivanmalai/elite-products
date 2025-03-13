@@ -19,6 +19,7 @@ import Account from "./pages/account/Account"
 import AllProducts from "./pages/AllProducts/AllProducts.jsx";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import "./App.css";
+import Blog from "./pages/blog/Blog.jsx";
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoading, setUser } from "./features/users/authSlice.js";
@@ -130,6 +131,8 @@ const App = () => {
           <Route path="/products/channakya-shampoo" element={<CShampo  addToCart={addToCart} />} /> 
           <Route path="/policy" element={<Policy />} />
           <Route path="/allproducts" element={<AllProducts />} />
+          <Route
+            path="/blog" element={<Blog />}/>
          <Route
             path="/reset-password"
             element={
