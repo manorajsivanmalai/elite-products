@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../contact/Contact.css'; 
 
 const Contact = () => {
@@ -70,9 +71,9 @@ const Contact = () => {
       
       <div className="contact-info">
         <h2>Contact Information</h2>
-        <p><strong>Email:</strong>Care@keliteglobalsolutions.com </p>
-        <p><strong>Phone Number:</strong>  +91-9642850007</p>
-        <p><strong>WhatsApp:</strong> +91-9642850007</p>
+        <p><strong>Email:</strong><Link to="mailto:Care@keliteglobalsolutions.com" className='contact-link' target='_blank'>Care@keliteglobalsolutions.com </Link></p>
+        <p><strong>Phone Number:</strong><Link to="tel:9642850007" className='contact-link'  target='_blank'>+91-9642850007</Link></p>
+        <p><strong>WhatsApp:</strong> <Link to="https://wa.me/9642850007" className='contact-link'  target='_blank'>+91-9642850007</Link> </p>
        
       </div>
 

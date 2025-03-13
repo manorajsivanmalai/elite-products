@@ -116,9 +116,9 @@ const Footer = () => {
                   </li>
                 </ul>
                 <div>
-                  <a href="tel:9642850007" className="footer-call">
+                  <Link to="tel:9642850007" className="footer-call">
                     <FaPhoneAlt /> +91-9642850007
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
