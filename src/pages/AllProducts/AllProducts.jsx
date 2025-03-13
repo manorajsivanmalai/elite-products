@@ -62,7 +62,7 @@ function AllProducts() {
       price: "₹0",
       path:'',
       status:false,
-      image: "https://demos.reytheme.com/london/wp-content/uploads/sites/8/2019/03/23-600x800.jpg",
+      image: faceserum,
     },
     {
       name: "Chanakya care face serum kids",
