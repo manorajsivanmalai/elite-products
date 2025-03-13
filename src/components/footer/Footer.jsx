@@ -116,8 +116,8 @@ const Footer = ({ cartItems }) => {
                   </li>
                 </ul>
                 <div>
-                  <a href="tel:8008020678" className="footer-call">
-                    <FaPhoneAlt /> +91-8008020678
+                  <a href="tel:9642850007" className="footer-call">
+                    <FaPhoneAlt /> +91-9642850007
                   </a>
                 </div>
               </div>

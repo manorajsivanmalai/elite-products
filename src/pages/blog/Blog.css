@@ -6,6 +6,12 @@
     background-attachment: fixed;
     padding: 65px 0;
 }
+.blog-content-head{
+    background-color: #fff;
+    padding: 10px 23px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
 .blog-head{
     overflow: hidden;
     display: -webkit-box;
@@ -14,10 +20,6 @@
     -webkit-box-orient: vertical;
     font-size: 20px;
     font-weight: 600;
-    background-color: #fff;
-    padding: 10px 23px;
-    margin-bottom: 10px;
-    border-radius: 12px;
 }
 .blog-para{
     overflow: hidden;
@@ -67,8 +69,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
-    padding: 30px 40px;
     z-index: 5;
+    
 }
 
 .bg-mask{
@@ -80,44 +82,88 @@
     left: 0;
     z-index: 4;
 }
+.blog-inner{
+    position: relative;
+    padding: 30px 40px;
+  
+}
+.blog-popup-content{
+    max-height: 80vh;
+    overflow-y: scroll;
+    scrollbar-width:none;
+}
+
+
+
 .close-btnpop{
     position: absolute;
-    top: -9px;
+    background: transparent;
+    top: -32px;
     right: 0;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #fff;
+    border-radius: 100%;
     color: #fff;
-   background-color: #000;
-   padding: 7px;
-   border-radius: 50%;
-    cursor: pointer;
- 
+    font-weight: bold;
+}
+.popup-title{
+    font-size: 22px;
+    font-weight: 600;
+    margin: 15px 0;
+    
+}
+.popup-p-blog{
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Nobel Uno Medium';
+    color: #3e3e3e;
+}
+.popup-blog-ul{
+    list-style: none;
+}
+.popup-blog-ul li{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0;
+    font-family: 'Nobel Uno Medium';
+    color: #3e3e3e;
+
+}
+.popup-blog-ul li span {
+    font-family: inherit;
+    color: #3e3e3e;
+
 }
 
-@media (min-width:768px)and (max-width:1023px){
+
+
+@media only screen and (max-width:767px){
+    .blog-popup{
+        width: 94%;
+
+    }
+}
+@media only screen and (min-width:768px) and (max-width:1024px){
     .blog-popup{
         width: 90%;
-        max-height: 672px;
-        overflow: scroll;
+        
     }
-    .close-btnpop {
-       
-        top: 0px;
-        right: 9px;
-     
+    .close-btnpop{
+        font-size: 14px;
     }
-
-}
-
-@media (max-width:767px){
-   .blog-popup{
-    width: 95%;
-    max-height: 80vh;
-    overflow: scroll;
-   }
-   .close-btnpop {
-   
-    top: 3px;
-    right: 7px;
-   
-}
-
+    .blog-head{
+        font-size: 17px;
+    }
+    .blog-cards{
+        padding: 20px 20px;
+    }
+    .blog-para{
+        font-size: 14px;
+    }
+    .blog-content-head {
+        background-color: #fff;
+        padding: 9px 15px;
+    }
 }

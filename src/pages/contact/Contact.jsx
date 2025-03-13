@@ -70,10 +70,9 @@ const Contact = () => {
       
       <div className="contact-info">
         <h2>Contact Information</h2>
-        <p><strong>Email:</strong> support@kelite.com</p>
-        <p><strong>Phone Number:</strong> 044-123654789</p>
-        <p><strong>WhatsApp:</strong> +91 1234567895</p>
-        <p><strong>Address:</strong> AB-149, 2nd Floor, 3rd Main Road</p>
+        <p><strong>Email:</strong>Care@keliteglobalsolutions.com </p>
+        <p><strong>Phone Number:</strong>  +91-9642850007</p>
+        <p><strong>WhatsApp:</strong> +91-9642850007</p>
        
       </div>
 
