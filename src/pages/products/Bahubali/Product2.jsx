@@ -36,6 +36,7 @@ import massage from "../../../assets/images/bahubali/massage.png"
 import dispenser from "../../../assets/images/bahubali/dispenser.png"
 import towel from "../../../assets/images/bahubali/towel.png"
 import foam_1 from "../../../assets/images/foam/foam_1.png"
+import foamme1 from "../../../assets/images/foam/foamme-1.png"
 
 import { useSelector } from 'react-redux';
 
@@ -139,7 +140,7 @@ function Product2({addToCart}) {
      
         <div className='col-md-6'>
           <div className='Intimate-image'>
-            <img src={foam1} alt=""  width='100%'/>
+            <img src={foamme1} alt=""  width='100%'/>
 
           </div>
 
@@ -266,8 +267,8 @@ function Product2({addToCart}) {
             <div className='col-md-12'>
               <div className='usage-grid'>
                 {usageInstructions.map((item, index) => (
-                  <div key={index} className='usage-item text-center'>
-                    <img src={item.img} alt={item.text} className='usage-img' />
+                  <div key={index} className='usage-item text-center how-to-use'>
+                    {/* <img src={item.img} alt={item.text} className='usage-img' /> */}
                     <p className='usage-text'>{item.text}</p>
                   </div>
                 ))}

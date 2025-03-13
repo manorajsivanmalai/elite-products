@@ -261,7 +261,11 @@
   }
 
 
-
+.how-to-use{
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
 
 
 @media (max-width: 1023px) {
