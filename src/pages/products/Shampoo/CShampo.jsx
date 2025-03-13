@@ -8,6 +8,8 @@ import Spray from "../../../components/Bahubali/Spray";
 
 import shamppro11 from "../../../assets/images/shampoo/chanakya-care-shampoo-11.jpg";
 import shamppro10 from "../../../assets/images/shampoo/chanakya-care-shampoo-10.jpg";
+import shamppro3 from "../../../assets/images/shampoo/chanakya-care-shampoo-3.jpg";
+import shamppro4 from "../../../assets/images/shampoo/chanakya-care-shampoo-4.jpg";
 
 //css
 import { useSelector } from 'react-redux'
@@ -139,6 +141,19 @@ function CShampo({ addToCart }) {
             <div>
                 
             </div>
+        </section>
+        <section className="c_shampoo py-5">
+          <div className="container">
+            <div className="row my-5">
+              <div className="col-md-6 col-12">
+                <img src={shamppro3} className="w-100" />
+              </div>
+              <div className="col-md-6 col-12">
+              <img src={shamppro4}  className="w-100"/>
+
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </>

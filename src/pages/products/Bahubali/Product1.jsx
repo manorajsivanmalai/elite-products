@@ -38,7 +38,7 @@ import discomfort from "../../../assets/images/bahubali/dermatology.png"
 import success from "../../../assets/images/bahubali/success.png"
 import bacteria from "../../../assets/images/bahubali/bacteria.png"
 
-
+import sprayhowtoUse from "../../../assets/images/spray-bahu/spray-how-to-use.png"
 //add to cart component images
 
 import sparyproduct5 from "../../../assets/images/spray-bahu/sparay-product-5.png"
@@ -257,9 +257,7 @@ function Product1({ addToCart }) {
                   <h3>Key Ingredients & Their Benefits – Men’s Intimate Mist Spray</h3>
                   <p><b>Lactic Acid </b> – Maintains pH balance, prevents irritation, and supports skin health</p>
                   <p><b>Tea Tree Oil (2%)</b> – Powerful antibacterial & antifungal properties to combat infections.</p>
-                  <p><b>Tea Tree Oil (2%)</b> – Powerful antibacterial & antifungal properties to combat infections.</p>
                   <p><b>Chamomile Extract </b> – Reduces inflammation, irritation, and redness.</p>
-                  <p><b>Chamomile Extract</b> – Reduces inflammation, irritation, and redness.</p>
                   <p><b>Menthol </b>– Provides a cooling sensation and instant refreshment.</p>
                   <p><b>Cyclodextrin</b> – Absorbs moisture and controls odor for all-day comfort.</p>
 
@@ -295,15 +293,17 @@ function Product1({ addToCart }) {
 
 
             <div className='col-md-6'>
-              <h3 className='text-uppercase usage-title pb-2 text-center'>How to Use :</h3>
-              <div className='usage-grid'>
+              <div>
+                <img src={sprayhowtoUse} alt="" className='w-100' />
+              </div>
+              {/* <div className='usage-grid'>
                 {usageInstructions.map((item, index) => (
                   <div key={index} className='usage-item text-center'>
                     <img src={item.img} alt={item.text} className='usage-img' />
                     <p className='usage-text'>{item.text}</p>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 
-const Footer = ({ cartItems }) => {
+const Footer = () => {
   return (
     <>
       <footer className="footer-wrapper">
@@ -78,7 +78,7 @@ const Footer = ({ cartItems }) => {
                 <h3 className="ftr-title">Get In Touch</h3>
                 <ul className="footer-ul-social">
                   <li className="nav-item">
-                    <Link to="" className="nav-link">
+                    <Link to="https://wa.me/9642850007" target="_blank" className="nav-link">
                       <FaWhatsapp />
                     </Link>
                   </li>

@@ -1,4 +1,3 @@
-import React from "react";
 import "./AllProducts.css";
 import { Link } from "react-router-dom";
 import Foam from "../../../src/assets/images/all-products/Foam.png"
@@ -73,7 +72,7 @@ function AllProducts() {
     },
     {
       name: " wiper toilet seat spary ",
-      price: "₹0",
+      price: "₹291",
       path:'',
       status:false,
       image: Sanitizer,

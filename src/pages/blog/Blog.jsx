@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Blog.css";
 import blogsData from "../../data/blogs.json";
 
-import { GoDotFill } from "react-icons/go";
 
 function Blog() {
   const [blog, setBlog] = useState([]);
@@ -33,24 +32,7 @@ function Blog() {
       </div>
       
       
-      <div className="bg-mask d-none"></div>
-        <div className="blog-popup d-none">
-          <div className="blog-inner">
-            <button className="close-btnpop">X</button>
-              <div className="blog-popup-content">
-                <h3 className="popup-title">Why Intimate Hygiene Matters for Men</h3>
-                <p className="popup-p-blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum doloribus a non voluptates aliquid ex ullam excepturi impedit aperiam magnam quis est laborum, neque saepe id architecto! Laboriosam, magni id.</p>
-
-                <h3  className="popup-title">Why Intimate Hygiene Matters for Men</h3>
-                <p className="popup-p-blog">Cleaning your intimate area is essential for overall health. The genital region’s skin is more sensitive than other parts of the body, so it requires gentle care. Poor hygiene here can lead to foul smells, itching, rashes, or even infections. In contrast, good intimate hygiene keeps you feeling fresh and comfortable throughout the day. It’s also important for sexual wellness – staying clean can boost confidence and reduce the risk of infections for you and your partner.</p>
-                <h3  className="popup-title">Common Misconceptions About Men’s Intimate Hygiene</h3>
-                <p className="popup-p-blog">Several myths often prevent men from taking intimate hygiene seriously. Here are a few debunked:</p>
-                <ul className="popup-blog-ul">
-                  <li><GoDotFill/> <span><strong>“It’s only for women.” </strong>Some men think intimate hygiene doesn’t apply to them. Fact: Men’s intimate areas sweat and harbor bacteria too. Ignoring this can lead to odor and infection. Everyone benefits from keeping private parts clean.</span></li>
-                </ul>
-              </div>
-          </div>
-        </div>
+     
 
       
 
