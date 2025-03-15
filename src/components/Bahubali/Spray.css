@@ -133,8 +133,12 @@
     .thumbnail-gallery{
       flex-direction: row;
       gap: 10px;
+      height: auto;
     }
     .thumbnail {
       width: 20% !important;      
+    }
+    .bahu-product-left{
+      row-gap: 15px;
     }
   }

@@ -107,6 +107,9 @@
     .banner-img-cshampo{
         width: 400px;
     }
+    .sec-2-cshampo-wrap {
+        margin-top: -25%;
+    }
 }
 @media only screen and (min-width:768px) and (max-width:1024px){
     .banner-img-cshampo{
@@ -177,4 +180,5 @@
             gap: 47px;
     }
 }
+
 
