@@ -58,7 +58,7 @@ const Navbar = () => {
                                         </div>
                                         <ul className="nav-mob-p-ul">
                                             <li className="nav-item"><Link to="/"  onClick={()=>setNavtoggle(false)}  className="nav-link">Home</Link></li>
-                                            <li className="nav-item dropdown-li"><Link to="" className="nav-link">Products <MdOutlineKeyboardArrowDown/></Link>
+                                            <li className="nav-item dropdown-li"><p className="nav-link">Products <MdOutlineKeyboardArrowDown/></p>
                                                 <ul  className="nav-mob-p-ul ul-dropdown">
                                                 <li className="nav-item"><Link to="/products/channakya-shampoo" onClick={()=>setNavtoggle(false)} className="nav-link ">Chanakya Care Shampoo</Link></li>
                                                 <li className="nav-item"><Link to="/products/facewash"  onClick={()=>setNavtoggle(false)}  className="nav-link">Charcoal face wash</Link></li>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 <div className="nav-mob-2-wrapper d-md-none d-block">
                     <ul className="mob-nav-2-ul">
                         <li className="nav-item"><NavLink to="/"  className="nav-link"><AiOutlineHome/> Home</NavLink></li>
-                        {/* <li className="nav-item"><NavLink to="/products"  className="nav-link"><IoSearchSharp/> Shop</NavLink></li> */}
+                        <li className="nav-item"><NavLink to="/allproducts"  className="nav-link"><IoSearchSharp/> Shop</NavLink></li>
                         <li className="nav-item"><a to="/login"  className="nav-link"><FaRegUser/>Account</a></li>
                         <li className="nav-item"><Link to="/cart" className="nav-link"><CgShoppingBag/>{addedcart && addedcart?.length>0 &&  <span className="dot"></span>}Cart</Link></li>
                     </ul>
