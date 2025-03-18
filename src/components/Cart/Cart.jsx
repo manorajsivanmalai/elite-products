@@ -1,32 +1,27 @@
+import "./Cart.css";
 import React, { useEffect, useState } from "react";
 import { FaTrash } from "react-icons/fa";
-import "./Cart.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {addCart,removeFromCart} from "../../features/products/AddtoCardSlice";
+import {removeFromCart} from "../../features/products/AddtoCardSlice";
 import axios from "axios";
 const api = "http://localhost:5000";
 const Cart = () => {
-  const addedcart = useSelector((state) => state.carts.carts);  // Get cart items from state
+  const addedcart = useSelector((state) => state.carts.carts);  
   const { products } = useSelector((state) => state.products);
   const { isLogin, user } = useSelector((state) => state.auth); 
-  const [filteredProducts, setFilteredProducts] = useState([]); // State to hold filtered products
+  const [filteredProducts, setFilteredProducts] = useState([]); 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   useEffect(() => {
-    // Map over products to filter them and add quantity from the cart
     const updatedFilteredProducts = products
-      .filter((product) => addedcart.some((cartItem) => parseInt(cartItem.product_id) === product.id))  // Filter only products in the cart
+      .filter((product) => addedcart.some((cartItem) => parseInt(cartItem.product_id) === product.id))  
       .map((product) => {
-        // Find the corresponding cart item to get the quantity
         const cartItem = addedcart.find((item) =>parseInt(item.product_id)=== product.id);
-  
-        // Return the product with the cart quantity included
         return {
           ...product,
-          quantity: cartItem ? cartItem.quantity : 1,  // Add quantity or default to 0 if not found
+          quantity: cartItem ? cartItem.quantity : 1,  
         };
       });
       console.log(addedcart,updatedFilteredProducts);
@@ -34,10 +29,8 @@ const Cart = () => {
     setFilteredProducts(updatedFilteredProducts);
   }, [addedcart, products]);
 
-  // Function to handle quantity updates
   const updateQuantity = async (productId, newQuantity) => {
-    if (newQuantity < 1) return;  // Prevent decreasing below 1
-    
+    if (newQuantity < 1) return;  
     try {
       if (isLogin) {
         await axios.put(`${api}/api/addtocart/update`, {
@@ -50,8 +43,6 @@ const Cart = () => {
       console.log("err :", error);
     }
 
- 
-
     setFilteredProducts((prev) =>
       prev.map((item) => {
         if (item.id === productId) {
@@ -61,18 +52,13 @@ const Cart = () => {
       })
     );
   
-
   };
 
-  // Function to handle removal of an item from the cart
   const handleRemove = (productId) => {
     setFilteredProducts((prevItems) => prevItems.filter((item) => item.id !== productId));
     dispatch(removeFromCart(productId))
   };
-  
-  // Calculate total based on filtered products
   const total = filteredProducts.reduce((acc, item) => acc + item.price * item.quantity, 0);
-
   const handleCheckout = () => {
     navigate("/checkout");
   };
@@ -87,7 +73,6 @@ const Cart = () => {
           <div>QUANTITY</div>
           <div>TOTAL</div>
         </div>
-
         {filteredProducts.length > 0 ? (
           filteredProducts.map((item) => (
             <div className="cart-item" key={item.id}>
@@ -116,23 +101,17 @@ const Cart = () => {
         ) : (
           <p className="empty-cart">Your cart is empty.</p>
         )}
-
         <div className="cart-notes">
           <p>🎁 Get free shipping on prepaid orders onwards ₹249</p>
           <p>🔒 Secure Shopping Guarantee</p>
         </div>
       </div>
 
-      {/* Right Section - Order Summary */}
       <div className="order-summary">
         <h3>ORDER SUMMARY</h3>
         <div className="summary-item">
           <span>Subtotal</span> <span>₹{total.toFixed(2)}</span>
         </div>
-        {/* <div className="summary-item">
-          <span>Coupon Code</span>
-          <input type="text" placeholder="Enter Coupon Code" />
-        </div> */}
         <div className="summary-item total">
           <span>TOTAL</span> <span>₹{total.toFixed(2)}</span>
         </div>

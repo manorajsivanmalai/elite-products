@@ -1,9 +1,7 @@
-//images
+
 import logo from "../../assets/images/logos/logo.png";
-//icons
 import { FaWhatsapp, FaFacebookF, FaYoutube, FaPhoneAlt } from "react-icons/fa";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
-//css
 import "./Footer.css";
 import { Link } from "react-router-dom";
 

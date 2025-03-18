@@ -2,30 +2,13 @@ import React from 'react'
 import {Swiper,SwiperSlide} from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Spray from "../../../components/Bahubali/Spray";
-
-import spray from "../../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png";
 import "../Bahubali/Product2.css"
 import bannerimg2 from "../../../assets/images/homepage/banners/home-banner-desktop-2.webp"
 import bannerimg4 from "../../../assets/images/homepage/banners/home-banner-desktop-4.webp"
-import foam1 from "../../../assets/images/bahubali/foam-1.png"
-import selfconfidence from "../../../assets/images/bahubali/self_confidence.jpg";
 import foam2 from "../../../assets/images/bahubali/foam-2.jpg"
 import bannermobimg2 from "../../../assets/images/homepage/banners/home-banner-mob-2.png"
 import bannermobimg4 from "../../../assets/images/homepage/banners/home-banner-mob-3.png"
-// import seven from "../../../assets/images/bahubali/pH balance.jpg"
-// import one from "../../../assets/images/bahubali/sweat.jpg";
-// import two from "../../../assets/images/bahubali/odor.jpg";
-// import three from "../../../assets/images/bahubali/non.jpg";
-// import four from "../../../assets/images/bahubali/oil.jpg"
-// import five from "../../../assets/images/bahubali/protection.jpg"
-// import six from "../../../assets/images/bahubali/hygiene.jpg"
-import Shake from "../../../assets/images/bahubali/Shake.jpg"
-import distance from "../../../assets/images/bahubali/distance.jpg"
-import workouts from "../../../assets/images/bahubali/workouts.jpg"
 
-import needed from "../../../assets/images/bahubali/needed.jpg"
-import intimacy from "../../../assets/images/bahubali/intimacy.jpg"
-import dressing from "../../../assets/images/bahubali/dressing.jpg"
 import bannerBg from "../../../assets/images/bahubali/banana-banner.png";
 import phmeter from "../../../assets/images/bahubali/ph-meter.png"
 import fresh from "../../../assets/images/bahubali/fresh.png"
@@ -35,9 +18,8 @@ import drops from "../../../assets/images/bahubali/drops.png"
 import massage from "../../../assets/images/bahubali/massage.png"
 import dispenser from "../../../assets/images/bahubali/dispenser.png"
 import towel from "../../../assets/images/bahubali/towel.png"
-import foam_1 from "../../../assets/images/foam/foam_1.png"
 import foamme1 from "../../../assets/images/foam/foamme-1.png"
-
+import foamproduct from "../../../assets/images/all-products/Foam.webp"
 import { useSelector } from 'react-redux';
 
 
@@ -282,7 +264,7 @@ function Product2({addToCart}) {
       <section className='bahu-product-sec6' id='cart'>
       <Spray 
         id={foamingProduct?.id ||1}
-        images={[foam_1]}
+        images={[foamproduct]}
         title={foamingProduct?.title || "Men’s Intimate Foaming Wash "}
         description={foamingProduct?.description  || "Men’s Intimate Foaming Wash is specially formulated to maintain hygiene, freshness, and confidence. Enriched with Lactic Acid, Tea Tree Oil, Seabuckthorn Oil, Cranberry Extract, and Aloe Vera, it gently cleanses while preventing odor, irritation, and infections. With a refreshing banana fragrance, this pH-balanced formula ensures all-day comfort."}
         price={foamingProduct?.price || 591}

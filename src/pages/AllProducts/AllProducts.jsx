@@ -1,15 +1,15 @@
 import "./AllProducts.css";
 import { Link } from "react-router-dom";
-import Foam from "../../../src/assets/images/all-products/Foam.png"
-import spary from "../../../src/assets/images/all-products/spary.png"
+import Foam from "../../../src/assets/images/all-products/Foam.webp"
+import spary from "../../../src/assets/images/all-products/spary.webp"
 
-import shampoo from "../../../src/assets/images/all-products/shampoo.png"
-import facewash from "../../../src/assets/images/all-products/facewash.png"
-import bodylotion from "../../../src/assets/images/all-products/bodylotion.png"
-import sunscreen from "../../../src/assets/images/all-products/sunscreen.png"
-import faceserum from "../../../src/assets/images/all-products/faceserum.png"
-import Hairremoval from "../../../src/assets/images/all-products/Hairremoval.png"
-import Sanitizer from "../../../src/assets/images/all-products/Sanitizer.png"
+import shampoo from "../../../src/assets/images/all-products/shampoo.webp"
+import facewash from "../../../src/assets/images/all-products/facewash.webp"
+import bodylotion from "../../../src/assets/images/all-products/bodylotion.webp"
+import sunscreen from "../../../src/assets/images/all-products/sunscreen.webp"
+import faceserum from "../../../src/assets/images/all-products/faceserum.webp"
+import Hairremoval from "../../../src/assets/images/all-products/Hairremoval.webp"
+import Sanitizer from "../../../src/assets/images/all-products/Sanitizer.webp"
 
 
 function AllProducts() {

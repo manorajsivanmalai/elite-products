@@ -1,9 +1,5 @@
-//
 import { Link,NavLink } from "react-router-dom";
-
-//images
 import logo from "../../assets/images/logos/logo.png"
-//icons
 import { FaRegUser ,FaRegHeart } from "react-icons/fa";
 import { CgShoppingBag } from "react-icons/cg";
 import { AiOutlineHome } from "react-icons/ai";
@@ -11,15 +7,14 @@ import { HiOutlineBars3CenterLeft } from "react-icons/hi2"
 import { CgClose } from "react-icons/cg";
 import { IoSearchSharp } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-
-//css
 import "./Navbar.css"
 import { useState } from "react";
 import { useSelector } from "react-redux";
-
 const Navbar = () => {
+
     const [navtoggle,setNavtoggle]=useState(false)
     const addedcart = useSelector((state) => state.carts.carts); 
+    
     return (
         <>
             <header>

@@ -3,9 +3,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
-// import Products from "./pages/products/Products";
 import Product1 from "./pages/products/Bahubali/Product1";
-// import Shampoo from "./pages/products/Shampoo/Shampoo";
 import Product2 from "./pages/products/Bahubali/Product2";
 import Facewash from "./pages/products/Facewash/Facewash";
 import Cart from "./components/Cart/Cart";
@@ -20,7 +18,7 @@ import AllProducts from "./pages/AllProducts/AllProducts.jsx";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import "./App.css";
 import Blog from "./pages/blog/Blog.jsx";
-import { useCallback, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoading, setUser } from "./features/users/authSlice.js";
 import { fetchaddtoCard } from "./api/fetchAddtocard.js";
@@ -35,7 +33,7 @@ const ProtectedRoute = ({ isLogin, routeName, children }) => {
       if (!isLogin && routeName === "checkout") {
           toast.warning("Please login before checkout!");
       }
-  }, [isLogin, routeName]); // Run effect when isLogin or routeName changes
+  }, [isLogin, routeName]);
 
   return isLogin ? children : <Navigate to="/login" />;
 };
@@ -98,8 +96,7 @@ const App = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-
-
+ 
   
   return (
     <>
@@ -120,9 +117,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/products" element={<Products />} /> */}
-          <Route path="/products/men-intimate-mist" element={<Product1 addToCart={addToCart} />} />
-          {/* <Route path="/products/channakya-shampoo" element={<Shampoo addToCart={addToCart}/>} /> */}
+          <Route path="/products/men-intimate-mist" element={<Product1 addToCart={addToCart} />} /> 
           <Route path="/products/men-intimate-foam" element={<Product2 addToCart={addToCart}/>} />
           <Route path="/products/facewash" element={<Facewash addToCart={addToCart}/>} />
           <Route path="/cart" element={<Cart   />} />
@@ -150,11 +145,10 @@ const App = () => {
             }
           /> 
         </Routes>
-      
       </main>
       <Footer  />
     </>
-  );
+  ) 
 };
 
 export default App;

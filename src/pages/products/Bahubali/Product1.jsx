@@ -1,18 +1,14 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import Spray from "../../../components/Bahubali/Spray";
-
-import spray from "../../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png";
 import "../Bahubali/Product1.css"
 import bannerimg2 from "../../../assets/images/homepage/banners/home-banner-desktop-2.webp"
 import bannerimg4 from "../../../assets/images/homepage/banners/home-banner-desktop-4.webp"
 import bannermobimg2 from "../../../assets/images/homepage/banners/home-banner-mob-2.png"
 import bannermobimg4 from "../../../assets/images/homepage/banners/home-banner-mob-3.png"
 import mist from "../../../assets/images/bahubali/intimate-mist.png"
-
 import intiamte from "../../../assets/images/bahubali/Men intimate mist.jpg"
-
 import seven from "../../../assets/images/bahubali/pH balance.jpg"
 import one from "../../../assets/images/bahubali/sweat.jpg";
 import two from "../../../assets/images/bahubali/odor.jpg";
@@ -23,38 +19,19 @@ import six from "../../../assets/images/bahubali/hygiene.jpg"
 import Shake from "../../../assets/images/bahubali/Shake.jpg"
 import distance from "../../../assets/images/bahubali/distance.jpg"
 import workouts from "../../../assets/images/bahubali/workouts.jpg"
-
 import needed from "../../../assets/images/bahubali/needed.jpg"
 import intimacy from "../../../assets/images/bahubali/intimacy.jpg"
 import dressing from "../../../assets/images/bahubali/dressing.jpg"
 import bannerBg from "../../../assets/images/bahubali/banana-banner.png"
-
-
 import needs from "../../../assets/images/bahubali/needs.png"
 import skin from "../../../assets/images/bahubali/skin-protection.png"
-
 import hand from "../../../assets/images/bahubali/hand.png"
 import discomfort from "../../../assets/images/bahubali/dermatology.png"
 import success from "../../../assets/images/bahubali/success.png"
 import bacteria from "../../../assets/images/bahubali/bacteria.png"
-
 import sprayhowtoUse from "../../../assets/images/spray-bahu/spray-how-to-use.png"
-//add to cart component images
-
 import sparyproduct5 from "../../../assets/images/spray-bahu/sparay-product-5.png"
-
-
-
-
-
-
 import { useSelector } from 'react-redux';
-
-
-
-
-
-
 
 const points = [
   {
@@ -100,13 +77,10 @@ const usageInstructions = [
   { text: "Allow a few seconds for the spray to dry before dressing", img: dressing },
 
 ];
-
-
 function Product1({ addToCart }) {
 
   const { products } = useSelector((state) => state.products);
   const sprayProduct = products.find(product => product.id === 2);
-
 
   return (
     <>
@@ -127,7 +101,6 @@ function Product1({ addToCart }) {
                   <img src={bannerimg2} className="w-100 banner-image" alt="Banner 1" />
                 </picture>
                 <div className="banner-content">
-
                   <button className="shop-now-btn"><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
                 </div>
               </div>
@@ -140,17 +113,11 @@ function Product1({ addToCart }) {
                   <img src={bannerimg4} className="w-100 banner-image" alt="Banner 1" />
                 </picture>
                 <div className="banner-content">
-
                   <button className="shop-now-btn"><a href="#cart" className='anchor-tag'>SHOP NOW</a></button>
                 </div>
               </div>
             </SwiperSlide>
-
-
-
           </Swiper>
-
-
         </div>
 
       </section>
@@ -313,7 +280,7 @@ function Product1({ addToCart }) {
       <section className='bahu-product-sec6' id='cart'>
         <Spray
           id={sprayProduct?.id || 2}
-          images={[ sparyproduct5]}
+          images={[sparyproduct5]}
           title={sprayProduct?.title || "Men Intimate Mist Spray – Bahubali"}
           description={sprayProduct?.description || "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."}
           price={sprayProduct?.price || 291}

@@ -1,21 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchProducts } from '../../api/fetchProduct';
 import shampoo1 from "../../assets/images/shampoo/shampoo-1.png";
-import shampoo from "../../assets/images/shampoo/shampo.png";
+import shampoo from "../../../src/assets/images/all-products/shampoo.webp"
 import bahubali1 from "../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png"
 import  bahubali2 from "../../assets/images/bahubali/intimate-mist.png";
-import  foam1 from  "../../assets/images/bahubali/foam-2.jpg";
 import foam2 from "../../assets/images/bahubali/foam-1.png";
 import fc1 from "../../assets/images/facewash/fc-1.jpg";
 import fc2 from "../../assets/images/facewash/fc-2.png";
 import fc3 from "../../assets/images/facewash/fc-3.png";
+import foam1 from "../../../src/assets/images/all-products/Foam.webp"
+
 const initialState = {
   products:[
     {
       "id": 4,
       "images": [
-        shampoo1,
-        shampoo
+        shampoo,
+        shampoo1
       ],
       "title": "Chanakya Care Shampoo",
       "description": "Let Kids be champions with the right Shampoo because strong hair, healthy scalps and confidence start at an early age.",

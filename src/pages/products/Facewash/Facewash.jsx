@@ -3,15 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./Facewash.css";
 import Spray from "../../../components/Bahubali/Spray";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
 import fashwashbanner from "../../../assets/images/facewash/facewash-banner.webp";
-import fc1 from "../../../assets/images/facewash/fc-1.jpg";
-import fc2 from "../../../assets/images/facewash/fc-2.png";
-import fc3 from "../../../assets/images/facewash/fc-3.png";
-
 import charcoalproduct3 from "../../../assets/images/facewash/charcooal-face-wash-product-3.png";
 import charcoalproduct6 from "../../../assets/images/facewash/charcooal-face-wash-product-6.png";
-
 import usage from "../../../assets/images/facewash/how-to-use-img.png";
 import { useSelector } from "react-redux";
 
@@ -57,6 +51,7 @@ const ingredients = [
       "Provides a pleasant scent while keeping the facewash refreshing to use.",
   },
 ];
+
 const steps = [
   {
     title: "Wet Your Face",
@@ -85,6 +80,7 @@ const steps = [
 ];
 
 function Facewash({ addToCart }) {
+  
   const { products } = useSelector((state) => state.products);
   const CharcoalFaceWash = products.find(product => product.id === 3);
 
@@ -128,7 +124,6 @@ function Facewash({ addToCart }) {
           </div>
         </div>
       </section>
-
       <section className="fc-sec-3" id='cart'>
         <section className="bahu-product-sec6">
           <Spray
@@ -142,7 +137,6 @@ function Facewash({ addToCart }) {
           />
         </section>
       </section>
-
       <section className="key-ingredients-section">
         <div className="container">
           <h3 className="title-section">Key Ingredients & Their Benefits</h3>

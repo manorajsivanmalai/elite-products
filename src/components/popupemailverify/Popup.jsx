@@ -19,16 +19,13 @@ const Popup = ({handleVerifyCode,handleEmailVerification,setVerificationCode}) =
             ...verifyotp,
             [e.target.name]: e.target.value,
           });
-        // Handle backspace: if the input is empty, focus the previous input field
         if (value.length === 0 && index > 0) {
             inputRefs[index - 1].current.focus();
           }
-        // Ensure the user can only input a single number
         if (value.length > 1) {
-          e.target.value = value.slice(0, 1); // Truncate to one character
+          e.target.value = value.slice(0, 1); 
         }
     
-        // Focus the next input field once the current one has a value
         if (value.length === 1 && index < inputRefs.length - 1) {
           inputRefs[index + 1].current.focus();
         }

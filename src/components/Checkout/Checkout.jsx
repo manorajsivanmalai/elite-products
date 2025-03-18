@@ -5,9 +5,9 @@ import "../Checkout/Checkout.css";
 import { useSelector } from "react-redux";
 
 function Checkout() {
-  const addedcart = useSelector((state) => state.carts.carts);  // Get cart items from state
-  const { products } = useSelector((state) => state.products);
-  const navigate = useNavigate();
+const addedcart = useSelector((state) => state.carts.carts);  
+const { products } = useSelector((state) => state.products);
+const navigate = useNavigate();
  const [cartItems, setCartItems] = useState([]); 
   const [userDetails, setUserDetails] = useState({
     name: "",
@@ -24,22 +24,20 @@ function Checkout() {
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
   const [showSummary, setShowSummary] = useState(false);
+
  useEffect(() => {
-    // Map over products to filter them and add quantity from the cart
     const updatedFilteredProducts = products
-      .filter((product) => addedcart.some((cartItem) => parseInt(cartItem.product_id) === product.id))  // Filter only products in the cart
+      .filter((product) => addedcart.some((cartItem) => parseInt(cartItem.product_id) === product.id))
       .map((product) => {
-        // Find the corresponding cart item to get the quantity
         const cartItem = addedcart.find((item) =>parseInt(item.product_id)=== product.id);
-  
         return {
           ...product,
           quantity: cartItem ? cartItem.quantity : 1,  
         };
       });
 
-    // Set the updated filtered products to the state
     setCartItems(updatedFilteredProducts);
+
   }, [addedcart, products]);
 
   const totalAmount = cartItems.reduce(
@@ -194,7 +192,6 @@ function Checkout() {
                       )
                   )}
 
-                  {/* State Dropdown */}
                   <div className="form-group col-md-6">
                     <label htmlFor="state">State:</label>
                     <select
@@ -216,7 +213,6 @@ function Checkout() {
                     )}
                   </div>
 
-                  {/* City Dropdown */}
                   <div className="form-group col-md-6">
                     <label htmlFor="city">City:</label>
                     <select
