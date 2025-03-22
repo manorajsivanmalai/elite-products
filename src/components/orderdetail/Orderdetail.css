@@ -177,3 +177,70 @@ font-size: 13px;
         width: 47%;
     }
 }
+
+
+/* No Orders State */
+.no-orders-container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 4rem auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .illustration {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .no-orders-title {
+    font-size: 1.75rem;
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+  }
+  
+  .no-orders-text {
+    color: #718096;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+  
+  .cta-button {
+    background: #4299e1;
+    color: white;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .cta-button:hover {
+    background: #3182ce;
+    transform: translateY(-1px);
+  }
+  
+  @media (max-width: 480px) {
+    .no-orders-container {
+      margin: 2rem 1rem;
+      padding: 1.5rem;
+    }
+    
+    .illustration {
+      width: 140px;
+      height: 140px;
+    }
+    
+    .no-orders-title {
+      font-size: 1.5rem;
+    }
+  }

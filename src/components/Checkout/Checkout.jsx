@@ -7,6 +7,10 @@ import { useSelector } from "react-redux";
 function Checkout() {
 const addedcart = useSelector((state) => state.carts.carts);  
 const { products } = useSelector((state) => state.products);
+const { isLogin, user } = useSelector((state) => state.auth); 
+console.log(user);
+
+
 const navigate = useNavigate();
  const [cartItems, setCartItems] = useState([]); 
   const [userDetails, setUserDetails] = useState({
@@ -124,6 +128,7 @@ const navigate = useNavigate();
                 userDetails: userDetails,
                 cartItems,
                 totalAmount,
+                user:user.id
               }),
             }
           );

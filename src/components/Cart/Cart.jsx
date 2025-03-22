@@ -6,6 +6,18 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {removeFromCart} from "../../features/products/AddtoCardSlice";
 import axios from "axios";
+import shampoo from "../../../src/assets/images/all-products/shampoo.webp"
+import bahubali1 from "../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png"
+import fc1 from "../../assets/images/facewash/fc-1.jpg";
+import foam1 from "../../../src/assets/images/all-products/Foam.webp"
+import { toast } from "react-toastify";
+
+const imageMap = {
+  "shampoo": shampoo,
+  "bahubali1":bahubali1,
+  "foam1":foam1,
+   "fc1":fc1,
+};
 const api = "http://localhost:5000";
 const Cart = () => {
   const addedcart = useSelector((state) => state.carts.carts);  
@@ -24,10 +36,10 @@ const Cart = () => {
           quantity: cartItem ? cartItem.quantity : 1,  
         };
       });
-      console.log(addedcart,updatedFilteredProducts);
     // Set the updated filtered products to the state
     setFilteredProducts(updatedFilteredProducts);
   }, [addedcart, products]);
+
 
   const updateQuantity = async (productId, newQuantity) => {
     if (newQuantity < 1) return;  
@@ -54,9 +66,22 @@ const Cart = () => {
   
   };
 
-  const handleRemove = (productId) => {
+  const handleRemove = async (productId) => {
+ 
     setFilteredProducts((prevItems) => prevItems.filter((item) => item.id !== productId));
     dispatch(removeFromCart(productId))
+    try {
+      if (isLogin) {
+        await axios.delete(`${api}/api/addtocart/remove`, {
+          data: { userId: user.id, productId: productId },
+        });
+      }
+    
+      toast.success("Item removed from cart");
+    } catch (error) {
+      console.error("Error removing item: ", error);
+    }
+    
   };
   const total = filteredProducts.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const handleCheckout = () => {
@@ -77,7 +102,7 @@ const Cart = () => {
           filteredProducts.map((item) => (
             <div className="cart-item" key={item.id}>
               <div className="cart-product">
-                <img src={item.images[0]} alt={item.title} className="cart-product-image" />
+                <img src={imageMap[item.images[0]]} alt={item.title} className="cart-product-image" />
                 <div className="cart-product-info">
                   <p>{item.title}</p>
                 </div>
@@ -119,7 +144,7 @@ const Cart = () => {
           PROCEED TO CHECKOUT
         </button>
         <button className="continue-shopping-btn">
-          <Link to="/">CONTINUE SHOPPING</Link>
+          <Link to="/">CONTINUE SHOPPING</Link> 
         </button>
       </div>
     </div>

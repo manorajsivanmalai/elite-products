@@ -166,14 +166,15 @@ const LoginSignup = () => {
 
     setVerificationLoading(true);
     try {
-      // const response = await axios.post(`${API_URL}/api/users/verify`, {
-      //   email:formData.email,
-      //   code: verificationCode,
-      // });
+      const response = await axios.post(`${API_URL}/api/users/verify`, {
+        email:formData.email,
+        code: verificationCode,
+      });
+   
         toast.success("Email verified successfully!");
         setPopuptoggle(false)
     } catch (error) {
-      toast.error("Verification failed. Try again.");
+      toast.error(error.response.data.message);
     }
     setVerificationLoading(false);
   };

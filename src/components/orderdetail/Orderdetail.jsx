@@ -9,7 +9,7 @@ const Orderdetail = ({ yourOrders }) => {
   const groupedOrders = yourOrders.reduce((acc, order) => {
     let existingOrder = acc.find((o) => o.order_id === order.order_id);
     if (existingOrder) {
-      existingOrder.product_names.push(order.name);
+      existingOrder.product_names.push(order.title);
     } else {
       acc.push({
         order_id: order.order_id,
@@ -18,7 +18,7 @@ const Orderdetail = ({ yourOrders }) => {
         shipment_id: order.shipment_id,
         payment_id: order.payment_id,
         address: order.address,
-        product_names: [order.name], 
+        product_names: [order.title], 
       });
     }
     return acc;
@@ -26,7 +26,7 @@ const Orderdetail = ({ yourOrders }) => {
 
   console.log(groupedOrders);
   return (
-    <>
+    yourOrders.length ? <>
       <section className="orderinfo-table-wrapper">
         <table className="orderinfo-table">
           <thead>
@@ -37,7 +37,7 @@ const Orderdetail = ({ yourOrders }) => {
               <th>Payment Status</th>
               <th>Total</th>
               <th>Address</th>
-              <th>Actions </th>
+              {/* <th>Actions </th> */}
             </tr>
           </thead>
           <tbody>
@@ -59,7 +59,7 @@ const Orderdetail = ({ yourOrders }) => {
                 </td>
                 <td>{ord.total_amount}</td>
                 <td>{ord.address}</td>
-                <td>
+                {/* <td>
                   <div className="btn-wrapper-ord-inf">
                     <button
                       className="cancel-order-btn"
@@ -69,7 +69,7 @@ const Orderdetail = ({ yourOrders }) => {
                     </button>
                     <button className="track-order-btn">Track</button>
                   </div>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>
@@ -95,7 +95,25 @@ const Orderdetail = ({ yourOrders }) => {
           </div>
         </div>
       )}
-    </>
+    </>: <>
+
+<div className="no-orders-container">
+  <svg className="illustration" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 5H21V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5Z" stroke="#CBD5E0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M3 5L12 12L21 5" stroke="#CBD5E0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M8 9H16" stroke="#CBD5E0" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M8 13H16" stroke="#CBD5E0" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
+  <h2 className="no-orders-title">No Orders Yet</h2>
+  <p className="no-orders-text">
+    It looks like you haven't placed any orders. <br />
+    Start shopping to fill this space with your purchases!
+  </p>
+  <button className="cta-button">
+    Start Shopping
+  </button>
+</div></>
+
   );
 };
 

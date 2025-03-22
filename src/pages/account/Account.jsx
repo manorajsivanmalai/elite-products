@@ -123,8 +123,8 @@ const fetcher =async (url, token) =>
          console.error('Error fetching orders:', error);
        }
      };
- 
-     fetchOrders();
+      fetchOrders()
+    
    }, [user.id]); 
   return (
     <div className="account-container">

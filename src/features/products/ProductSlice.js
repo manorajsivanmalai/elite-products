@@ -15,8 +15,8 @@ const initialState = {
     {
       "id": 4,
       "images": [
-        shampoo,
-        shampoo1
+        "shampoo",
+        "shampoo1"
       ],
       "title": "Chanakya Care Shampoo",
       "description": "Let Kids be champions with the right Shampoo because strong hair, healthy scalps and confidence start at an early age.",
@@ -28,8 +28,8 @@ const initialState = {
     {
       "id": 2,
       "images": [
-       bahubali1,
-       bahubali2
+       "bahubali1",
+       "bahubali2"
       ],
       "title": "Men Intimate Mist Spray – Bahubali",
       "description": "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control.",
@@ -41,8 +41,8 @@ const initialState = {
     {
       "id": 1,
       "images": [
-        foam1,
-        foam2,
+        "foam1",
+        "foam2",
       ],
       "title": "Men’s Intimate Foaming Wash",
       "description": "Men’s Intimate Foaming Wash is specially formulated to maintain hygiene, freshness, and confidence...",
@@ -54,9 +54,9 @@ const initialState = {
     {
       "id": 3,
       "images": [
-        fc1,
-        fc2,
-        fc3
+        "fc1",
+        "fc2",
+        "fc3"
       ],
       "title": "Charcoal Face Wash",
       "description": "Charcoal Face Wash Cares for Your Skin, Keeping It Clean, Clear, and Fresh!",
