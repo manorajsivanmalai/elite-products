@@ -3,8 +3,8 @@ import "./PopupforgetPassword.css";
 import React, { useState } from "react";
 import axios from "axios";
 import { FiMail, FiX, FiLock } from "react-icons/fi";
-
-const API_URL = "http://localhost:5000";
+import config from "../../config";
+const API_URL =config.API_URL;
 const PopupForgetPassword = ({ setPopuptoggle }) => {
     const [fpemail, setFpemail] = useState("");
     const [error, setError] = useState("");

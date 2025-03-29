@@ -38,7 +38,7 @@ const Popup = ({handleVerifyCode,handleEmailVerification,setVerificationCode}) =
             toast.error("Invalid OTP");
             return  
         }
-        console.log("verified");
+        
         setVerifyotp({
         otpnum1:"",
         otpnum2:"",

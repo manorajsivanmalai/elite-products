@@ -8,7 +8,7 @@ import useSWR from 'swr';
 import OrderDetail from "../../components/orderdetail/Orderdetail";
 import { FiUser, FiShoppingBag, FiLogOut, FiEdit, FiX } from 'react-icons/fi';
 
-
+import config from '../../config';
 const fetcher =async (url, token) =>
   await axios
      .get(url, {
@@ -25,7 +25,7 @@ const fetcher =async (url, token) =>
        
      });
  const Account = () => {
-   const api = 'http://localhost:5000';
+   const api = config.API_URL;
    const [orderinfotoggle,setOrderinfotoggle]=useState(false);
    const [yourOrders,setYourOrders]=useState();
    const [edittoggle, setEdittoggle] = useState(false);

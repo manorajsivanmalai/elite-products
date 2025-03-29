@@ -71,6 +71,10 @@ const Contact = () => {
       
       <div className="contact-info">
         <h2>Contact Information</h2>
+        <p><strong>Address: </strong>
+        K’Elite Global Solutions 
+        Hno 11-9-258,vijayapuroclony,kothapet, Hyderabad,telangana 500035
+        </p>
         <p><strong>Email:</strong><Link to="mailto:Care@keliteglobalsolutions.com" className='contact-link' target='_blank'>Care@keliteglobalsolutions.com </Link></p>
         <p><strong>Phone Number:</strong><Link to="tel:9642850007" className='contact-link'  target='_blank'>+91-9642850007</Link></p>
         <p><strong>WhatsApp:</strong> <Link to="https://wa.me/9642850007" className='contact-link'  target='_blank'>+91-9642850007</Link> </p>

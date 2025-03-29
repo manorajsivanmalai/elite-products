@@ -11,14 +11,14 @@ import bahubali1 from "../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-
 import fc1 from "../../assets/images/facewash/fc-1.jpg";
 import foam1 from "../../../src/assets/images/all-products/Foam.webp"
 import { toast } from "react-toastify";
-
+import config from "../../config";
 const imageMap = {
   "shampoo": shampoo,
   "bahubali1":bahubali1,
   "foam1":foam1,
    "fc1":fc1,
 };
-const api = "http://localhost:5000";
+const api = config.API_URL;
 const Cart = () => {
   const addedcart = useSelector((state) => state.carts.carts);  
   const { products } = useSelector((state) => state.products);

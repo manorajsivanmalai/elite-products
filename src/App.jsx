@@ -26,7 +26,8 @@ import { toast, ToastContainer } from "react-toastify";
 import { fetchProducts } from "./api/fetchProduct.js";
 import {addCart} from "./features/products/AddtoCardSlice.js";
 import axios from "axios";
-const api = "http://localhost:5000";
+import config from "./config.js";
+const api = config.API_URL;
 
 const ProtectedRoute = ({ isLogin, routeName, children }) => {
   useEffect(() => {
@@ -122,7 +123,7 @@ const App = () => {
           <Route path="/products/facewash" element={<Facewash addToCart={addToCart}/>} />
           <Route path="/cart" element={<Cart   />} />
           <Route path="/login" element={<LoginSignup />} />      
-          <Route path="/checkout" element={<Checkout   />} /> 
+          <Route path="/checkout" element={ <ProtectedRoute isLogin={isLogin} routeName={"checkout"}><Checkout   /></ProtectedRoute>} /> 
           <Route path="/products/channakya-shampoo" element={<CShampo  addToCart={addToCart} />} /> 
           <Route path="/policy" element={<Policy />} />
           <Route path="/allproducts" element={<AllProducts />} />

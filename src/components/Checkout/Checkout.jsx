@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { State, City } from "country-state-city";
 import "../Checkout/Checkout.css";
 import { useSelector } from "react-redux";
-
+import { toast } from "react-toastify";
+import config from "../../config";
 function Checkout() {
 const addedcart = useSelector((state) => state.carts.carts);  
 const { products } = useSelector((state) => state.products);
 const { isLogin, user } = useSelector((state) => state.auth); 
-console.log(user);
 
 
 const navigate = useNavigate();
@@ -28,7 +28,7 @@ const navigate = useNavigate();
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
   const [showSummary, setShowSummary] = useState(false);
-
+  const [stateCode,setStateCode]=useState("");
  useEffect(() => {
     const updatedFilteredProducts = products
       .filter((product) => addedcart.some((cartItem) => parseInt(cartItem.product_id) === product.id))
@@ -60,13 +60,15 @@ const navigate = useNavigate();
 
   const handleStateChange = (e) => {
     const selectedState = e.target.value;
-    setUserDetails((prev) => ({ ...prev, state: selectedState, city: "" }));
+    setStateCode(selectedState)
+    const stateName=State.getStateByCodeAndCountry(selectedState,"IN").name;
+    setUserDetails((prev) => ({ ...prev, state: stateName, city: "" }));
     setCities(City.getCitiesOfState("IN", selectedState) || []);
   };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setUserDetails((prev) => ({ ...prev, [name]: value }));
+    setUserDetails((prev) => ({ ...prev, [name]: value })) ;
   };
 
   const validateForm = () => {
@@ -93,7 +95,7 @@ const navigate = useNavigate();
       }
 
       const orderResponse = await fetch(
-        "http://localhost:5000/api/order/create-razorpay-order",
+        `${config.API_URL}/api/order/create-razorpay-order`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -117,7 +119,7 @@ const navigate = useNavigate();
         order_id: orderData.order.id,
         handler: async function (response) {
           const paymentResponse = await fetch(
-            "http://localhost:5000/api/order/verify-payment",
+            `${config.API_URL}/api/order/verify-payment`,
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -135,7 +137,8 @@ const navigate = useNavigate();
 
           const paymentData = await paymentResponse.json();
           if (paymentData.success) {
-            alert("Order stored successfully!");
+            toast.success("your order has been placed successfully")
+            navigate("/");
             // navigate("/order-confirmation", {
             //   state: {
             //     payment_id: response.razorpay_payment_id,
@@ -163,6 +166,7 @@ const navigate = useNavigate();
       alert("Payment failed. Try again!");
     }
   };
+
 
   return (
     <div className="chkout-outer">
@@ -203,7 +207,7 @@ const navigate = useNavigate();
                       className="form-control"
                       id="state"
                       name="state"
-                      value={userDetails.state}
+                      value={stateCode}
                       onChange={handleStateChange}
                     >
                       <option value="">Select State</option>

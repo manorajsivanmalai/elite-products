@@ -3,8 +3,9 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./ResetPassword.css";
+import config from "../../config";
 
-const API_URL = "http://localhost:5000";
+const API_URL = config.API_URL;
 
 const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState("");

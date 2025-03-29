@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
-const apiurl = "http://localhost:5000/";
+import config from "../config";
+const apiurl = config.API_URL;
 
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",

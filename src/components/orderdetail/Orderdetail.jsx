@@ -3,6 +3,7 @@ import { TiTick } from "react-icons/ti";
 import cancelpopup from "../../assets/images/icons/cancel.png";
 import "./Orderdetail.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Orderdetail = ({ yourOrders }) => {
   const [cancelPopup, setCancelPopup] = useState(false);
 
@@ -109,9 +110,9 @@ const Orderdetail = ({ yourOrders }) => {
     It looks like you haven't placed any orders. <br />
     Start shopping to fill this space with your purchases!
   </p>
-  <button className="cta-button">
-    Start Shopping
-  </button>
+ 
+   <Link className="cta-button"   to="/allproducts" style={{textDecoration:"none"}}>start shopping</Link>
+ 
 </div></>
 
   );

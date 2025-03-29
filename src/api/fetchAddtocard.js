@@ -1,7 +1,8 @@
 // src/redux/wishlist/wishlistThunks.js
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import config from '../config';
 import axios from 'axios';
-const api="http://localhost:5000"
+const api=config.API_URL;
 export const fetchaddtoCard = createAsyncThunk(
   'addtocard/fetchaddtocard',
   async (userId, { rejectWithValue }) => {

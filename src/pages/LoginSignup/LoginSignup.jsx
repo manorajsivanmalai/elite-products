@@ -14,7 +14,8 @@ import { setUser,setLoading } from "../../features/users/authSlice";
 import { TiTick } from "react-icons/ti";
 import Popup from "../../components/popupemailverify/Popup.jsx"
 import Popupforgetpassword from "../../components/popupemailverify/Popupforgetpassword.jsx";
-const API_URL = "http://localhost:5000";
+import config from "../../config.js";
+const API_URL = config.API_URL;
 const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
 const GoogleLoginButton = ({ btntext }) => {
   const navigate = useNavigate();
@@ -136,7 +137,6 @@ const LoginSignup = () => {
 
   // Step 1: Send Verification Code
   const handleEmailVerification = async () => {
-   console.log("calling");
    let response ;
     setIsemailverify(true);
     try {
