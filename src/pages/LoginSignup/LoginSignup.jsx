@@ -16,7 +16,7 @@ import Popup from "../../components/popupemailverify/Popup.jsx"
 import Popupforgetpassword from "../../components/popupemailverify/Popupforgetpassword.jsx";
 import config from "../../config.js";
 const API_URL = config.API_URL;
-const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
+const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '498241484142-cn1aij6c93sf9hb95juihpeeohhijait.apps.googleusercontent.com';
 const GoogleLoginButton = ({ btntext }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -42,8 +42,8 @@ const GoogleLoginButton = ({ btntext }) => {
 
   return (
     <GoogleOAuthProvider clientId={clientId }>
-      <div className="flex justify-center mt-4">
-        <GoogleLogin onSuccess={handleSuccess} onError={() => toast.error("Google Login Failed")} text="continue_with" />
+      <div className="flex justify-center mt-4 google-iframe">
+        <GoogleLogin onSuccess={handleSuccess} onError={() => toast.error("Google Login Failed")} text="continue_with"  width="100%"  />
       </div>
     </GoogleOAuthProvider>
   );

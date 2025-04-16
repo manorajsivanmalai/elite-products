@@ -83,6 +83,7 @@ function Facewash({ addToCart }) {
   
   const { products } = useSelector((state) => state.products);
   const CharcoalFaceWash = products.find(product => product.id === 3);
+console.log(products);
 
   return (
     <>

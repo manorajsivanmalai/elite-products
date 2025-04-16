@@ -184,3 +184,22 @@
     font-size: 14px;
     font-weight: 500;
   }
+
+  .google-iframe {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .google-iframe > div {
+    width: 100% !important; /* Ensures the button container takes full width */
+  }
+  
+  iframe {
+    width: 100% !important; /* Ensures the actual Google button inside iframe expands */
+  }
+  
+  .google-iframe #container{
+    padding: 0 !important;
+    width: 100%;
+}

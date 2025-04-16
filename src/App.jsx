@@ -28,7 +28,6 @@ import {addCart} from "./features/products/AddtoCardSlice.js";
 import axios from "axios";
 import config from "./config.js";
 const api = config.API_URL;
-
 const ProtectedRoute = ({ isLogin, routeName, children }) => {
   useEffect(() => {
       if (!isLogin && routeName === "checkout") {

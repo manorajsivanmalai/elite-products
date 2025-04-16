@@ -5,6 +5,16 @@ import "../Checkout/Checkout.css";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import config from "../../config";
+import shampoo from "../../../src/assets/images/all-products/shampoo.webp"
+import bahubali1 from "../../assets/images/bahubali/Bhahubali_100ML_3D-removebg-preview (1).png"
+import fc1 from "../../assets/images/facewash/fc-1.jpg";
+import foam1 from "../../../src/assets/images/all-products/Foam.webp"
+const imageMap = {
+  "shampoo": shampoo,
+  "bahubali1":bahubali1,
+  "foam1":foam1,
+   "fc1":fc1,
+};
 function Checkout() {
 const addedcart = useSelector((state) => state.carts.carts);  
 const { products } = useSelector((state) => state.products);
@@ -287,10 +297,10 @@ const navigate = useNavigate();
                 key={index}
                 className="des-details d-flex align-items-center p-2 border rounded mb-3"
               >
-                {/* Product Image */}
+               
                 <div className="col-4">
                   <img
-                    src={item?.images[0]}
+                    src={imageMap[item?.images[0]]}
                     alt={item.title}
                     className="img-fluid rounded"
                   />
