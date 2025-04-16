@@ -7,6 +7,7 @@ import fashwashbanner from "../../../assets/images/facewash/facewash-banner.webp
 import charcoalproduct3 from "../../../assets/images/facewash/charcooal-face-wash-product-3.png";
 import charcoalproduct6 from "../../../assets/images/facewash/charcooal-face-wash-product-6.png";
 import usage from "../../../assets/images/facewash/how-to-use-img.png";
+import cartFacewash from "../../../assets/images/facewash/cart-face-wash.webp"
 import { useSelector } from "react-redux";
 
 const ingredients = [
@@ -129,7 +130,7 @@ console.log(products);
         <section className="bahu-product-sec6">
           <Spray
             id={CharcoalFaceWash?.id || 3}
-            images={ [ charcoalproduct3,charcoalproduct6]}
+            images={ [cartFacewash]}
             title={CharcoalFaceWash?.title || "Charcoal Face Wash"}
             description={CharcoalFaceWash?.description || "Charcoal Face Wash Cares for Your Skin, Keeping It Clean, Clear, and Fresh!"}
             price={CharcoalFaceWash?.price || 491}

@@ -6,6 +6,7 @@ import shamppro11 from "../../../assets/images/shampoo/chanakya-care-shampoo-11.
 import shamppro10 from "../../../assets/images/shampoo/chanakya-care-shampoo-10.jpg";
 import shamppro3 from "../../../assets/images/shampoo/chanakya-care-shampoo-3.jpg";
 import shamppro4 from "../../../assets/images/shampoo/chanakya-care-shampoo-4.jpg";
+import cartShapoo from "../../../assets/images/shampoo/cart-shampoo.webp"
 
 //css
 import { useSelector } from "react-redux";
@@ -98,7 +99,7 @@ function CShampo({ addToCart }) {
         <section style={{ backgroundColor: "#ffff" }} className="pt-4">
           <Spray
             id={CharcoalShampoo?.id || 4}
-            images={[shamppro10, shamppro11]}
+            images={[cartShapoo]}
             title={CharcoalShampoo?.title || "Chanakya Care Shampoo"}
             description={
               CharcoalShampoo?.description ||

@@ -20,6 +20,8 @@ import dispenser from "../../../assets/images/bahubali/dispenser.png"
 import towel from "../../../assets/images/bahubali/towel.png"
 import foamme1 from "../../../assets/images/foam/foamme-1.png"
 import foamproduct from "../../../assets/images/all-products/Foam.webp"
+import CartWash1 from "../../../assets/images/bahubali/cart-wash-1.webp"
+import CartWash2 from "../../../assets/images/bahubali/cart-wash-2.webp"
 import { useSelector } from 'react-redux';
 
 
@@ -264,7 +266,7 @@ function Product2({addToCart}) {
       <section className='bahu-product-sec6' id='cart'>
       <Spray 
         id={foamingProduct?.id ||1}
-        images={[foamproduct]}
+        images={[CartWash1,CartWash2]}
         title={foamingProduct?.title || "Men’s Intimate Foaming Wash "}
         description={foamingProduct?.description  || "Men’s Intimate Foaming Wash is specially formulated to maintain hygiene, freshness, and confidence. Enriched with Lactic Acid, Tea Tree Oil, Seabuckthorn Oil, Cranberry Extract, and Aloe Vera, it gently cleanses while preventing odor, irritation, and infections. With a refreshing banana fragrance, this pH-balanced formula ensures all-day comfort."}
         price={foamingProduct?.price || 591}

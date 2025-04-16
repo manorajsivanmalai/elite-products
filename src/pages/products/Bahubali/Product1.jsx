@@ -31,6 +31,8 @@ import success from "../../../assets/images/bahubali/success.png"
 import bacteria from "../../../assets/images/bahubali/bacteria.png"
 import sprayhowtoUse from "../../../assets/images/spray-bahu/spray-how-to-use.png"
 import sparyproduct5 from "../../../assets/images/spray-bahu/sparay-product-5.png"
+import Cartmist1 from "../../../assets/images/bahubali/cart-mist-1.webp"
+import Cartmist2 from "../../../assets/images/bahubali/cart-mist-2.webp"
 import { useSelector } from 'react-redux';
 
 const points = [
@@ -280,7 +282,7 @@ function Product1({ addToCart }) {
       <section className='bahu-product-sec6' id='cart'>
         <Spray
           id={sprayProduct?.id || 2}
-          images={[sparyproduct5]}
+          images={[Cartmist1,Cartmist2]}
           title={sprayProduct?.title || "Men Intimate Mist Spray – Bahubali"}
           description={sprayProduct?.description || "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."}
           price={sprayProduct?.price || 291}
