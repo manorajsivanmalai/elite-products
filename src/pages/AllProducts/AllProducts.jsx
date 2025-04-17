@@ -1,115 +1,133 @@
 import "./AllProducts.css";
 import { Link } from "react-router-dom";
-import Foam from "../../../src/assets/images/all-products/Foam.webp"
-import spary from "../../../src/assets/images/all-products/spary.webp"
+import Foam from "../../../src/assets/images/all-products/Foam.webp";
+import spary from "../../../src/assets/images/all-products/spary.webp";
 
-import shampoo from "../../../src/assets/images/all-products/shampoo.webp"
-import facewash from "../../../src/assets/images/all-products/facewash.webp"
-import bodylotion from "../../../src/assets/images/all-products/bodylotion.webp"
-import sunscreen from "../../../src/assets/images/all-products/sunscreen.webp"
-import faceserum from "../../../src/assets/images/all-products/faceserum.webp"
-import Hairremoval from "../../../src/assets/images/all-products/Hairremoval.webp"
-import Sanitizer from "../../../src/assets/images/all-products/Sanitizer.webp"
-
+import shampoo from "../../../src/assets/images/all-products/shampoo.webp";
+import facewash from "../../../src/assets/images/all-products/facewash.webp";
+import bodylotion from "../../../src/assets/images/all-products/bodylotion.webp";
+import sunscreen from "../../../src/assets/images/all-products/sunscreen.webp";
+import faceserum from "../../../src/assets/images/all-products/faceserum.webp";
+import Hairremoval from "../../../src/assets/images/all-products/Hairremoval.webp";
+import Sanitizer from "../../../src/assets/images/all-products/Sanitizer.webp";
+import combo from "../../../src/assets/images/all-products/combo.webp";
+// import {} from '../../features/products/ProductSlice'
+import { useSelector } from "react-redux";
 
 function AllProducts() {
+  const { products } = useSelector((state) => state.products);
+  const foamingWash = products.find((product) => product.id === 1);
+  const menIntimateMistSpray = products.find((product) => product.id === 2);
+  const charcoalfacewash = products.find((product) => product.id === 3);
+  const careshampoo = products.find((product) => product.id === 4);
+  // const foamingProduct = products.find(product => product.id === 1);
   const Allproducts = [
     {
       name: "Bhahubali Men Intimate wash",
-      price: "₹591",
-      path:'/products/men-intimate-foam',
-      status:true,
+      price: "₹" + foamingWash.price,
+      path: "/products/men-intimate-foam",
+      status: true,
       image: Foam,
     },
     {
       name: "Bhahubali Men intimate mist",
-      price: "₹291",
-      path:'/products/men-intimate-mist',
-      status:true,
+      price: "₹" + menIntimateMistSpray.price,
+      path: "/products/men-intimate-mist",
+      status: true,
       image: spary,
     },
     {
       name: "chanakya care shampoo kids",
-      price: "₹691",
-      path:'/products/channakya-shampoo',
-      status:true,
+      price: "₹" + careshampoo.price,
+      path: "/products/channakya-shampoo",
+      status: true,
       image: shampoo,
     },
     {
       name: "charcoal face wash",
-      price: "₹491",
-      path:'/products/facewash',
-      status:true,
+      price: "₹" + charcoalfacewash.price,
+      path: "/products/facewash",
+      status: true,
       image: facewash,
+    },
+    {
+      name: "Combo Men intimate wash + Men intimate mist ",
+      price: "₹" + charcoalfacewash.price,
+      path: "/products/men-intimate-mist#cart",
+      status: true,
+      image: combo,
     },
     {
       name: "Chanakya care body lotion",
       price: "₹291",
-      path:'',
-      status:false,
+      path: "",
+      status: false,
       image: bodylotion,
     },
     {
       name: "Chanaka care sunscreen spray",
       price: "₹791",
-      path:'',
-      status:false,
+      path: "",
+      status: false,
       image: sunscreen,
     },
     {
       name: "Chanakya care face serum kids",
       price: "₹491",
-      path:'',
-      status:false,
+      path: "",
+      status: false,
       image: faceserum,
     },
     {
       name: "Kelite Hair removal spray",
       price: "₹791 ",
-      path:'',
-      status:false,
+      path: "",
+      status: false,
       image: Hairremoval,
     },
     {
       name: " wiper toilet seat spary ",
       price: "₹291",
-      path:'',
-      status:false,
+      path: "",
+      status: false,
       image: Sanitizer,
     },
-  
   ];
 
   return (
-   
-
     <section className="all-products-sec">
       <div className="container">
         <div className="row row-gap-4 ">
-          {Allproducts.map((product,index)=>(
- <div className="col-lg-3 col-md-4 col-6 all-prod-col" key={index}>
- <div className="all-product-inner-wrap">
-   <img src={product.image} alt={product.name} className="w-100 allproduct-images" />
-   <div className="all-product-body">
-     <h5 className="all-prod-b-title">{product.name}</h5>
-     <div className="all-product-inner-b">
-     <p>{product.price}</p>
-     {!product.status && <p className="all-prod-sold-out">Sold Out</p>}
-     </div>                
-     <Link to={product.path} className={`all-prod-link-btn ${product.path==''?'disabled-link':""}`} >View Product</Link>
-   </div>
-
- </div>
-
-</div>
-
+          {Allproducts.map((product, index) => (
+            <div className="col-lg-3 col-md-4 col-6 all-prod-col" key={index}>
+              <div className="all-product-inner-wrap">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-100 allproduct-images"
+                />
+                <div className="all-product-body">
+                  <h5 className="all-prod-b-title">{product.name}</h5>
+                  <div className="all-product-inner-b">
+                    <p>{product.price}</p>
+                    {!product.status && (
+                      <p className="all-prod-sold-out">Sold Out</p>
+                    )}
+                  </div>
+                  <Link
+                    to={product.path}
+                    className={`all-prod-link-btn ${
+                      product.path == "" ? "disabled-link" : ""
+                    }`}
+                  >
+                    View Product
+                  </Link>
+                </div>
+              </div>
+            </div>
           ))}
-         
         </div>
-        
       </div>
-
-
     </section>
   );
 }

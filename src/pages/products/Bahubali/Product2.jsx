@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import {Swiper,SwiperSlide} from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Spray from "../../../components/Bahubali/Spray";
@@ -23,6 +24,7 @@ import foamproduct from "../../../assets/images/all-products/Foam.webp"
 import CartWash1 from "../../../assets/images/bahubali/cart-wash-1.webp"
 import CartWash2 from "../../../assets/images/bahubali/cart-wash-2.webp"
 import { useSelector } from 'react-redux';
+import combo from "../../../assets/images/bahubali/combo.webp"
 
 
 
@@ -72,6 +74,11 @@ function Product2({addToCart}) {
   const { products } = useSelector((state) => state.products);
   const foamingProduct = products.find(product => product.id === 1);
 
+    const [showCombo, setShowCombo] = useState(false);
+    const toggleCombo = () => {
+      setShowCombo((prevShowCombo) => !prevShowCombo);
+    };
+    
   return (
     <>
     <section className='bahubali-product'>
@@ -186,7 +193,6 @@ function Product2({addToCart}) {
                     src={item.img}
                     alt={item.text}
                     className="img-fluid"
-                   
                   />
                   <p className="">{item.text}</p>
                 </div>
@@ -262,7 +268,7 @@ function Product2({addToCart}) {
         </div>
       </section>
 
-
+      {!showCombo && (
       <section className='bahu-product-sec6' id='cart'>
       <Spray 
         id={foamingProduct?.id ||1}
@@ -277,7 +283,27 @@ function Product2({addToCart}) {
 
       </section>
     
-    
+  )}
+   {showCombo && (
+             <section className='bahu-product-sec6' id='cart'>
+             <Spray 
+               id={foamingProduct?.id ||1}
+               images={[combo]}
+               title={foamingProduct?.title || "Men’s Intimate Foaming Wash "}
+               description={foamingProduct?.description  || "Men’s Intimate Foaming Wash is specially formulated to maintain hygiene, freshness, and confidence. Enriched with Lactic Acid, Tea Tree Oil, Seabuckthorn Oil, Cranberry Extract, and Aloe Vera, it gently cleanses while preventing odor, irritation, and infections. With a refreshing banana fragrance, this pH-balanced formula ensures all-day comfort."}
+               price={foamingProduct?.price || 591}
+               oldPrice={foamingProduct?.oldPrice || 982}
+               addToCart={addToCart}
+             />
+       
+       
+             </section>
+        )}
+      <section className='combo-section pb-5'>
+      <button onClick={toggleCombo} className='combo-button'>
+          {showCombo ? "View Single Product" : "View Combo Offer"}
+        </button>
+      </section>
     </>
   )
 }

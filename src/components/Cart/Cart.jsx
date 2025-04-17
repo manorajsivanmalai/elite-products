@@ -127,7 +127,7 @@ const Cart = () => {
           <p className="empty-cart">Your cart is empty.</p>
         )}
         <div className="cart-notes">
-          <p>🎁 Get free shipping on prepaid orders onwards ₹249</p>
+          <p>🎁 Get free shipping on every order!</p>
           <p>🔒 Secure Shopping Guarantee</p>
         </div>
       </div>

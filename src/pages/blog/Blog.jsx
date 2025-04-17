@@ -30,12 +30,6 @@ function Blog() {
           </div>
         </div>
       </div>
-      
-      
-     
-
-      
-
       {selected && (
     <>    <div className="bg-mask" onClick={() => setSelected(null)}></div>
     <div className="blog-popup">

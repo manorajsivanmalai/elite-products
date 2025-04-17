@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from "swiper/modules";
 import Spray from "../../../components/Bahubali/Spray";
@@ -33,6 +34,11 @@ import sprayhowtoUse from "../../../assets/images/spray-bahu/spray-how-to-use.pn
 import sparyproduct5 from "../../../assets/images/spray-bahu/sparay-product-5.png"
 import Cartmist1 from "../../../assets/images/bahubali/cart-mist-1.webp"
 import Cartmist2 from "../../../assets/images/bahubali/cart-mist-2.webp"
+import combo from "../../../assets/images/bahubali/combo.webp"
+
+
+
+
 import { useSelector } from 'react-redux';
 
 const points = [
@@ -84,6 +90,11 @@ function Product1({ addToCart }) {
   const { products } = useSelector((state) => state.products);
   const sprayProduct = products.find(product => product.id === 2);
 
+  const [showCombo, setShowCombo] = useState(false);
+  const toggleCombo = () => {
+    setShowCombo((prevShowCombo) => !prevShowCombo);
+  };
+  
   return (
     <>
       <section className='bahubali-product'>
@@ -279,18 +290,44 @@ function Product1({ addToCart }) {
       </section>
 
 
-      <section className='bahu-product-sec6' id='cart'>
-        <Spray
-          id={sprayProduct?.id || 2}
-          images={[Cartmist1,Cartmist2]}
-          title={sprayProduct?.title || "Men Intimate Mist Spray – Bahubali"}
-          description={sprayProduct?.description || "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."}
-          price={sprayProduct?.price || 291}
-          oldPrice={sprayProduct?.oldPrice || 500}
-          addToCart={addToCart}
-        />
-
-
+      {!showCombo && (
+          <section className="bahu-product-sec6" id="cart">
+            <Spray
+              id={sprayProduct?.id || 2}
+              images={[Cartmist1, Cartmist2]}
+              title={sprayProduct?.title || "Men Intimate Mist Spray – Bahubali"}
+              description={
+                sprayProduct?.description ||
+                "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."
+              }
+              price={sprayProduct?.price || 291}
+              oldPrice={sprayProduct?.oldPrice || 500}
+              addToCart={addToCart}
+            />
+          </section>
+        )}
+       {showCombo && (
+          <section className="bahu-product-sec6" id="cart">
+            <Spray
+              id={sprayProduct?.id || 2}
+              images={[combo]}
+              title={
+                sprayProduct?.title || "Men intimate wash + Men intimate mist"
+              }
+              description={
+                sprayProduct?.description ||
+                "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."
+              }
+              price={sprayProduct?.price || 730}
+              oldPrice={sprayProduct?.oldPrice || 982}
+              addToCart={addToCart}
+            />
+          </section>
+        )}
+      <section className='combo-section pb-5'>
+      <button onClick={toggleCombo} className='combo-button'>
+          {showCombo ? "View Single Product" : "View Combo Offer"}
+        </button>
       </section>
 
 
