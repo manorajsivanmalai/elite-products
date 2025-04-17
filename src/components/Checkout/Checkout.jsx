@@ -109,7 +109,7 @@ const navigate = useNavigate();
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ amount: totalAmount }),
+          body: JSON.stringify({ amount: (18/100) * totalAmount + totalAmount }),
         }
       );
 
@@ -123,7 +123,7 @@ const navigate = useNavigate();
 
       const options = {
         key: razorpayKey,
-        amount: totalAmount * 100,
+        amount: ((18/100) * totalAmount + totalAmount) * 100,
         currency: "INR",
         name: "Elite Store",
         order_id: orderData.order.id,
@@ -139,7 +139,7 @@ const navigate = useNavigate();
                 signature: response.razorpay_signature,
                 userDetails: userDetails,
                 cartItems,
-                totalAmount,
+                totalAmount:((18/100) * totalAmount + totalAmount) * 100,
                 user:user.id
               }),
             }
@@ -270,7 +270,7 @@ const navigate = useNavigate();
                   </p>
                 ))}
                 <p>
-                  <strong>Total Amount:</strong> ₹{totalAmount}
+                  <strong>Total Amount:</strong> ₹{((18/100) * totalAmount + totalAmount)}
                 </p>
                 <div className="text-center order-btns">
                   <button
@@ -315,9 +315,9 @@ const navigate = useNavigate();
                   <p className="mb-0">
                     Price: ₹<strong>{item.price}</strong>
                   </p>
-                  <p className="mb-0">
+                  {/* <p className="mb-0">
                     Subtotal: ₹<strong>{item.quantity * item.price}</strong>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             ))}
@@ -329,12 +329,13 @@ const navigate = useNavigate();
                 </strong>
               </h4>
               <h4>
-                Total Price: ₹
+                Gst:{" "}
+                  {(18/100) * totalAmount}
+              </h4>
+              <h4>
+                Total Price : ₹
                 <strong>
-                  {cartItems.reduce(
-                    (sum, item) => sum + item.price * item.quantity,
-                    0
-                  )}
+                  {(18/100)*totalAmount + totalAmount }
                 </strong>
               </h4>
 

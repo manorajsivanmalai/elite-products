@@ -135,10 +135,13 @@ const Cart = () => {
       <div className="order-summary">
         <h3>ORDER SUMMARY</h3>
         <div className="summary-item">
-          <span>Subtotal</span> <span>₹{total.toFixed(2)}</span>
+          <span style={{display:"block"}}>Subtotal</span> <span>₹{total.toFixed(2)}</span>
+        </div>
+        <div className="summary-item">
+          <span style={{display:"block"}}>gst(18%)</span> <span>₹{((18 / 100) * total).toFixed(2)}</span>
         </div>
         <div className="summary-item total">
-          <span>TOTAL</span> <span>₹{total.toFixed(2)}</span>
+          <span>TOTAL</span> <span>₹{(((18 / 100) * total)+total).toFixed(2)}</span>
         </div>
         <button className="checkout-btn" disabled={filteredProducts.length === 0} onClick={handleCheckout}>
           PROCEED TO CHECKOUT
