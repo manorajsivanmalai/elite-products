@@ -12,11 +12,13 @@ import fc1 from "../../assets/images/facewash/fc-1.jpg";
 import foam1 from "../../../src/assets/images/all-products/Foam.webp"
 import { toast } from "react-toastify";
 import config from "../../config";
+import combo from "../../assets/images/bahubali/combo.webp"
 const imageMap = {
   "shampoo": shampoo,
   "bahubali1":bahubali1,
   "foam1":foam1,
    "fc1":fc1,
+   "combo":combo
 };
 const api = config.API_URL;
 const Cart = () => {

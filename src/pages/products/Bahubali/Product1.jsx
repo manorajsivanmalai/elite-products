@@ -89,7 +89,8 @@ function Product1({ addToCart }) {
 
   const { products } = useSelector((state) => state.products);
   const sprayProduct = products.find(product => product.id === 2);
-
+  const comboProduct = products.find(product => product.id === 5);
+ 
   const [showCombo, setShowCombo] = useState(false);
   const toggleCombo = () => {
     setShowCombo((prevShowCombo) => !prevShowCombo);
@@ -309,17 +310,17 @@ function Product1({ addToCart }) {
        {showCombo && (
           <section className="bahu-product-sec6" id="cart">
             <Spray
-              id={sprayProduct?.id || 2}
+              id={comboProduct?.id || 5}
               images={[combo]}
               title={
-                sprayProduct?.title || "Men intimate wash + Men intimate mist"
+                comboProduct?.title || "Men intimate wash + Men intimate mist"
               }
               description={
-                sprayProduct?.description ||
+                comboProduct?.description ||
                 "Introducing the ultimate hygiene solution for modern men. Formulated with lactic acid, tea tree oil, aloe vera extract, chamomile extract, and menthol, ensuring freshness and odor control."
               }
-              price={sprayProduct?.price || 730}
-              oldPrice={sprayProduct?.oldPrice || 982}
+              price={comboProduct?.price || 730}
+              oldPrice={comboProduct?.oldPrice || 982}
               addToCart={addToCart}
             />
           </section>
