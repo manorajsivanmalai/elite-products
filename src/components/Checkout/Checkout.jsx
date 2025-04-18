@@ -178,6 +178,124 @@ const navigate = useNavigate();
   };
 
 
+
+// do not use
+  // const handlePayment = async () => {
+  //   try {
+  //     const razorpayKey = import.meta.env.VITE_RAZORPAY_KEY;
+  //     if (!razorpayKey) {
+  //       alert("Failed to get Razorpay key");
+  //       return;
+  //     }
+  
+  //     const orderResponse = await fetch(
+  //       `${config.API_URL}/api/order/create-razorpay-order`,
+  //       {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify({ amount: (18 / 100) * totalAmount + totalAmount }),
+  //       }
+  //     );
+  
+  //     if (!orderResponse.ok) throw new Error("Failed to create Razorpay order");
+  //     const orderData = await orderResponse.json();
+  
+  //     if (!orderData.success) {
+  //       alert("Failed to create Razorpay order");
+  //       return;
+  //     }
+  
+  //     const options = {
+  //       key: razorpayKey,
+  //       amount: ((18 / 100) * totalAmount + totalAmount) * 100,
+  //       currency: "INR",
+  //       name: "Elite Store",
+  //       order_id: orderData.order.id,
+  //       handler: async function (response) {
+  //         const paymentResponse = await fetch(
+  //           `${config.API_URL}/api/order/verify-payment`,
+  //           {
+  //             method: "POST",
+  //             headers: { "Content-Type": "application/json" },
+  //             body: JSON.stringify({
+  //               order_id: orderData.order.id,
+  //               payment_id: response.razorpay_payment_id,
+  //               signature: response.razorpay_signature,
+  //               userDetails: userDetails,
+  //               cartItems,
+  //               totalAmount: ((18 / 100) * totalAmount + totalAmount) * 100,
+  //               user: user.id,
+  //             }),
+  //           }
+  //         );
+  
+  //         const paymentData = await paymentResponse.json();
+  //         if (paymentData.success) {
+  //           // After payment success, fetch shipping details from iCarry API
+  //           const logisticsResponse = await fetch(`${process.env.REACT_APP_ICARRY_API_KEY}/api/logistics/icarry`, {
+  //             method: "POST",
+  //             headers: {
+  //               "Content-Type": "application/json",
+  //             },
+  //             body: JSON.stringify({
+  //               userDetails: userDetails,
+  //               cartItems: cartItems,
+  //               totalAmount: totalAmount,
+  //               paymentId: response.razorpay_payment_id,
+  //               orderId: orderData.order.id,
+  //             }),
+  //           });
+            
+  //           const logisticsData = await logisticsResponse.json();
+  
+  //           if (logisticsData.success) {
+  //             toast.success("Your order has been placed successfully, and logistics details have been updated.");
+  //             navigate("/order-confirmation", {
+  //               state: {
+  //                 payment_id: response.razorpay_payment_id,
+  //                 orderId: orderData.order.id,
+  //                 totalAmount,
+  //                 email: userDetails.email,
+  //                 shippingDetails: logisticsData.shippingDetails,
+  //               },
+  //             });
+  //           } else {
+  //             alert("Failed to update logistics details!");
+  //           }
+  //         } else {
+  //           alert("Payment verification failed!");
+  //         }
+  //       },
+  //       prefill: {
+  //         name: userDetails.name,
+  //         email: userDetails.email,
+  //         contact: userDetails.phone,
+  //       },
+  //       theme: { color: "#3399cc" },
+  //     };
+  
+  //     const razorpay = new window.Razorpay(options);
+  //     razorpay.open();
+  //   } catch (error) {
+  //     console.error("Error during payment:", error);
+  //     alert("Payment failed. Try again!");
+  //   }
+  // };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className="chkout-outer">
       <div className="container chk-out">
