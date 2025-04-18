@@ -12,6 +12,14 @@ import Hairremoval from "../../../src/assets/images/all-products/Hairremoval.web
 import Sanitizer from "../../../src/assets/images/all-products/Sanitizer.webp";
 import combo from "../../../src/assets/images/all-products/combo.webp";
 // import {} from '../../features/products/ProductSlice'
+
+import productBahubaliCombo from "../../assets/images/all-products/products-bahubali-combo.png"
+import productcharcoal from "../../assets/images/all-products/products-charcoal.png"
+import productspray from "../../assets/images/all-products/products-spray.png"
+import productwash from "../../assets/images/all-products/products-wash.png"
+import productshampoo from "../../assets/images/all-products/products-shampoo.png"
+
+
 import { useSelector } from "react-redux";
 
 function AllProducts() {
@@ -27,35 +35,35 @@ function AllProducts() {
       price: "₹" + foamingWash.price,
       path: "/products/men-intimate-foam",
       status: true,
-      image: Foam,
+      image: productwash,
     },
     {
       name: "Bhahubali Men intimate mist",
       price: "₹" + menIntimateMistSpray.price,
       path: "/products/men-intimate-mist",
       status: true,
-      image: spary,
+      image: productspray,
     },
     {
       name: "chanakya care shampoo kids",
       price: "₹" + careshampoo.price,
       path: "/products/channakya-shampoo",
       status: true,
-      image: shampoo,
+      image: productshampoo,
     },
     {
       name: "charcoal face wash",
       price: "₹" + charcoalfacewash.price,
       path: "/products/facewash",
       status: true,
-      image: facewash,
+      image: productcharcoal,
     },
     {
       name: "Combo Men intimate wash + Men intimate mist ",
       price: "₹" + charcoalfacewash.price,
       path: "/products/men-intimate-mist#cart",
       status: true,
-      image: combo,
+      image: productBahubaliCombo,
     },
     {
       name: "Chanakya care body lotion",
